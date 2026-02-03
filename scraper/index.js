@@ -66,10 +66,20 @@ async function scrapeLeaveCalendar() {
 
     // Step 1: Login
     console.log('🔐 Logging in...');
-    await page.goto(CONFIG.loginUrl, { waitUntil: 'networkidle2' });
+    await page.goto(CONFIG.loginUrl, { waitUntil: 'networkidle2', timeout: 60000 });
 
-    // Wait for page to fully load
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // Wait for page to fully load and JavaScript to execute
+    await new Promise(resolve => setTimeout(resolve, 5000));
+
+    // Wait for login form to appear
+    try {
+      await page.waitForSelector('input[type="text"], input[type="password"]', { timeout: 15000 });
+    } catch (e) {
+      console.log('⚠️ Login form not found, saving debug screenshot...');
+      await page.screenshot({ path: path.join(__dirname, '..', 'debug', 'login-error.png'), fullPage: true });
+      const html = await page.content();
+      fs.writeFileSync(path.join(__dirname, '..', 'debug', 'login-error.html'), html);
+    }
 
     // Debug: Log all input fields found
     const inputs = await page.$$eval('input', els => els.map(el => ({

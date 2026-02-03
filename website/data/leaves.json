@@ -4,18 +4,32 @@
   "year": "2026",
   "holidays": [
     {
+      "date": 16,
+      "fullDate": "2026-02-16",
+      "month": 2,
+      "year": 2026,
+      "name": "CNY Eve (Company Holiday)"
+    },
+    {
       "date": 17,
       "fullDate": "2026-02-17",
       "month": 2,
       "year": 2026,
-      "name": "Lunar New year (1st day)(SG)"
+      "name": "Lunar New Year (1st day)"
     },
     {
       "date": 18,
       "fullDate": "2026-02-18",
       "month": 2,
       "year": 2026,
-      "name": "Lunar New year (2nd day)(SG)"
+      "name": "Lunar New Year (2nd day)"
+    },
+    {
+      "date": 19,
+      "fullDate": "2026-02-19",
+      "month": 2,
+      "year": 2026,
+      "name": "CNY (Company Holiday)"
     }
   ],
   "leaves": [

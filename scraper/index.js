@@ -30,6 +30,12 @@ const LEAVE_TYPES = {
   'HL': { name: 'Hospitalization Leave', color: '#ff5722' }
 };
 
+// Company-declared holidays (not in HR portal)
+const COMPANY_HOLIDAYS = [
+  { date: 16, month: 2, year: 2026, name: 'CNY Eve (Company Holiday)' },
+  { date: 19, month: 2, year: 2026, name: 'CNY (Company Holiday)' }
+];
+
 // Friendly name mapping (system name -> display name)
 const NAME_MAP = {
   'JOHN YANG JIA HAN': 'John',
@@ -319,6 +325,30 @@ async function scrapeLeaveCalendar() {
       leaveTypeName: LEAVE_TYPES[leave.leaveType]?.name || leave.leaveType,
       color: LEAVE_TYPES[leave.leaveType]?.color || '#999999'
     }));
+
+    // Add company-declared holidays for current month
+    const currentMonth = parseInt(calendarData.month);
+    const currentYear = parseInt(calendarData.year);
+    COMPANY_HOLIDAYS.forEach(holiday => {
+      if (holiday.month === currentMonth && holiday.year === currentYear) {
+        // Check if not already in holidays list
+        const exists = calendarData.holidays.some(h =>
+          h.date === holiday.date && h.month === holiday.month && h.year === holiday.year
+        );
+        if (!exists) {
+          calendarData.holidays.push({
+            date: holiday.date,
+            fullDate: `${holiday.year}-${String(holiday.month).padStart(2, '0')}-${String(holiday.date).padStart(2, '0')}`,
+            month: holiday.month,
+            year: holiday.year,
+            name: holiday.name
+          });
+        }
+      }
+    });
+
+    // Sort holidays by date
+    calendarData.holidays.sort((a, b) => a.date - b.date);
 
     // Step 5: Save data
     console.log('💾 Saving data...');

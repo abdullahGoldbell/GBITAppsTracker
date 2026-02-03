@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-03T07:05:43.969Z",
+  "scrapedAt": "2026-02-03T08:23:54.404Z",
   "month": 2,
   "year": 2026,
   "monthName": "February",
@@ -57,6 +57,17 @@
       "color": "#3498db"
     },
     {
+      "date": 4,
+      "fullDate": "2026-02-04",
+      "month": 2,
+      "year": 2026,
+      "employee": "LEE KIAN HOW",
+      "leaveType": "ANNU",
+      "displayName": "LEE KIAN HOW",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
       "date": 5,
       "fullDate": "2026-02-05",
       "month": 2,
@@ -90,6 +101,17 @@
       "color": "#f39c12"
     },
     {
+      "date": 11,
+      "fullDate": "2026-02-11",
+      "month": 2,
+      "year": 2026,
+      "employee": "NEO ZHI KAI (PM)",
+      "leaveType": "WFH 2",
+      "displayName": "NEO ZHI KAI (PM)",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
       "date": 12,
       "fullDate": "2026-02-12",
       "month": 2,
@@ -97,6 +119,17 @@
       "employee": "LIM YI HWEE (JOEY)",
       "leaveType": "WFH 2",
       "displayName": "Joey",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 12,
+      "fullDate": "2026-02-12",
+      "month": 2,
+      "year": 2026,
+      "employee": "NEO ZHI KAI",
+      "leaveType": "WFH 2",
+      "displayName": "NEO ZHI KAI",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
     },
@@ -138,11 +171,33 @@
       "fullDate": "2026-02-23",
       "month": 2,
       "year": 2026,
+      "employee": "NEO ZHI KAI",
+      "leaveType": "NSL",
+      "displayName": "NEO ZHI KAI",
+      "leaveTypeName": "National Service Leave",
+      "color": "#1abc9c"
+    },
+    {
+      "date": 23,
+      "fullDate": "2026-02-23",
+      "month": 2,
+      "year": 2026,
       "employee": "TAN WEN XIAN (ALLEN)",
       "leaveType": "ANNU",
       "displayName": "Allen",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
+    },
+    {
+      "date": 24,
+      "fullDate": "2026-02-24",
+      "month": 2,
+      "year": 2026,
+      "employee": "NEO ZHI KAI",
+      "leaveType": "NSL",
+      "displayName": "NEO ZHI KAI",
+      "leaveTypeName": "National Service Leave",
+      "color": "#1abc9c"
     },
     {
       "date": 25,
@@ -156,6 +211,17 @@
       "color": "#3498db"
     },
     {
+      "date": 25,
+      "fullDate": "2026-02-25",
+      "month": 2,
+      "year": 2026,
+      "employee": "NEO ZHI KAI",
+      "leaveType": "NSL",
+      "displayName": "NEO ZHI KAI",
+      "leaveTypeName": "National Service Leave",
+      "color": "#1abc9c"
+    },
+    {
       "date": 26,
       "fullDate": "2026-02-26",
       "month": 2,
@@ -167,6 +233,39 @@
       "color": "#3498db"
     },
     {
+      "date": 26,
+      "fullDate": "2026-02-26",
+      "month": 2,
+      "year": 2026,
+      "employee": "NEO ZHI KAI",
+      "leaveType": "NSL",
+      "displayName": "NEO ZHI KAI",
+      "leaveTypeName": "National Service Leave",
+      "color": "#1abc9c"
+    },
+    {
+      "date": 27,
+      "fullDate": "2026-02-27",
+      "month": 2,
+      "year": 2026,
+      "employee": "NEO ZHI KAI",
+      "leaveType": "NSL",
+      "displayName": "NEO ZHI KAI",
+      "leaveTypeName": "National Service Leave",
+      "color": "#1abc9c"
+    },
+    {
+      "date": 28,
+      "fullDate": "2026-02-28",
+      "month": 2,
+      "year": 2026,
+      "employee": "NEO ZHI KAI",
+      "leaveType": "NSL",
+      "displayName": "NEO ZHI KAI",
+      "leaveTypeName": "National Service Leave",
+      "color": "#1abc9c"
+    },
+    {
       "date": 20,
       "fullDate": "2026-02-20",
       "month": 2,
@@ -174,6 +273,17 @@
       "employee": "JOHN YANG JIA HAN",
       "leaveType": "ANNU",
       "displayName": "John",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 20,
+      "fullDate": "2026-02-20",
+      "month": 2,
+      "year": 2026,
+      "employee": "LEE KIAN HOW",
+      "leaveType": "ANNU",
+      "displayName": "LEE KIAN HOW",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },

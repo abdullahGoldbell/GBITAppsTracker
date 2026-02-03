@@ -135,7 +135,7 @@ class LeaveCalendar {
 
   render() {
     this.updateMonthDisplay();
-    this.renderTwoMonthCalendar();
+    this.renderCalendar();
     this.updateStats();
     this.renderTodaySidebar();
   }
@@ -143,95 +143,17 @@ class LeaveCalendar {
   updateMonthDisplay() {
     const months = ['January', 'February', 'March', 'April', 'May', 'June',
                     'July', 'August', 'September', 'October', 'November', 'December'];
-    const month1 = months[this.currentDate.getMonth()];
-    const year1 = this.currentDate.getFullYear();
-
-    // Next month
-    const nextDate = new Date(this.currentDate);
-    nextDate.setMonth(nextDate.getMonth() + 1);
-    const month2 = months[nextDate.getMonth()];
-    const year2 = nextDate.getFullYear();
-
-    document.getElementById('currentMonth').textContent = `${month1} ${year1} - ${month2} ${year2}`;
+    const month = months[this.currentDate.getMonth()];
+    const year = this.currentDate.getFullYear();
+    document.getElementById('currentMonth').textContent = `${month} ${year}`;
   }
 
-  renderTwoMonthCalendar() {
-    const container = document.getElementById('calendarGrid').parentElement;
-
-    // Check if we already have a two-month structure
-    let twoMonthContainer = container.querySelector('.two-month-container');
-    if (!twoMonthContainer) {
-      // Create two-month layout
-      const originalGrid = document.getElementById('calendarGrid');
-      const originalHeader = container.querySelector('.calendar-header-row');
-
-      twoMonthContainer = document.createElement('div');
-      twoMonthContainer.className = 'two-month-container';
-
-      // First month
-      const month1Wrapper = document.createElement('div');
-      month1Wrapper.className = 'month-wrapper';
-      month1Wrapper.innerHTML = `
-        <div class="month-title" id="month1Title"></div>
-        <div class="calendar-header-row">
-          <div class="calendar-header-cell">Sun</div>
-          <div class="calendar-header-cell">Mon</div>
-          <div class="calendar-header-cell">Tue</div>
-          <div class="calendar-header-cell">Wed</div>
-          <div class="calendar-header-cell">Thu</div>
-          <div class="calendar-header-cell">Fri</div>
-          <div class="calendar-header-cell">Sat</div>
-        </div>
-        <div class="calendar-grid" id="calendarGrid1"></div>
-      `;
-
-      // Second month
-      const month2Wrapper = document.createElement('div');
-      month2Wrapper.className = 'month-wrapper';
-      month2Wrapper.innerHTML = `
-        <div class="month-title" id="month2Title"></div>
-        <div class="calendar-header-row">
-          <div class="calendar-header-cell">Sun</div>
-          <div class="calendar-header-cell">Mon</div>
-          <div class="calendar-header-cell">Tue</div>
-          <div class="calendar-header-cell">Wed</div>
-          <div class="calendar-header-cell">Thu</div>
-          <div class="calendar-header-cell">Fri</div>
-          <div class="calendar-header-cell">Sat</div>
-        </div>
-        <div class="calendar-grid" id="calendarGrid2"></div>
-      `;
-
-      twoMonthContainer.appendChild(month1Wrapper);
-      twoMonthContainer.appendChild(month2Wrapper);
-
-      // Replace original structure
-      if (originalHeader) originalHeader.remove();
-      originalGrid.remove();
-      container.appendChild(twoMonthContainer);
-    }
-
-    // Render both months
-    const months = ['January', 'February', 'March', 'April', 'May', 'June',
-                    'July', 'August', 'September', 'October', 'November', 'December'];
-
-    // Month 1
-    const year1 = this.currentDate.getFullYear();
-    const month1 = this.currentDate.getMonth();
-    document.getElementById('month1Title').textContent = `${months[month1]} ${year1}`;
-    this.renderCalendarMonth(document.getElementById('calendarGrid1'), year1, month1);
-
-    // Month 2
-    const nextDate = new Date(this.currentDate);
-    nextDate.setMonth(nextDate.getMonth() + 1);
-    const year2 = nextDate.getFullYear();
-    const month2 = nextDate.getMonth();
-    document.getElementById('month2Title').textContent = `${months[month2]} ${year2}`;
-    this.renderCalendarMonth(document.getElementById('calendarGrid2'), year2, month2);
-  }
-
-  renderCalendarMonth(grid, year, month) {
+  renderCalendar() {
+    const grid = document.getElementById('calendarGrid');
     grid.innerHTML = '';
+
+    const year = this.currentDate.getFullYear();
+    const month = this.currentDate.getMonth();
 
     // First day of the month
     const firstDay = new Date(year, month, 1);
@@ -255,11 +177,6 @@ class LeaveCalendar {
       grid.appendChild(cell);
       currentDate.setDate(currentDate.getDate() + 1);
     }
-  }
-
-  renderCalendar() {
-    // Legacy method - now redirects to two-month view
-    this.renderTwoMonthCalendar();
   }
 
   createDayCell(date, currentMonth, today) {

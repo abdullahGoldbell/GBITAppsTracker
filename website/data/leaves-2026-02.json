@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-03T08:24:58.500Z",
+  "scrapedAt": "2026-02-03T08:56:09.597Z",
   "month": 2,
   "year": 2026,
   "monthName": "February",
@@ -63,7 +63,7 @@
       "year": 2026,
       "employee": "LEE KIAN HOW",
       "leaveType": "ANNU",
-      "displayName": "LEE KIAN HOW",
+      "displayName": "Kian How",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -270,6 +270,17 @@
       "fullDate": "2026-02-20",
       "month": 2,
       "year": 2026,
+      "employee": "CHIN WAI MUN",
+      "leaveType": "ANNU",
+      "displayName": "Wai Mun",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 20,
+      "fullDate": "2026-02-20",
+      "month": 2,
+      "year": 2026,
       "employee": "JOHN YANG JIA HAN",
       "leaveType": "ANNU",
       "displayName": "John",
@@ -283,7 +294,7 @@
       "year": 2026,
       "employee": "LEE KIAN HOW",
       "leaveType": "ANNU",
-      "displayName": "LEE KIAN HOW",
+      "displayName": "Kian How",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },

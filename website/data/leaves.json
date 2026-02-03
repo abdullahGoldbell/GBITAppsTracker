@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-03T08:24:47.533Z",
+  "scrapedAt": "2026-02-03T08:55:58.913Z",
   "months": [
     {
       "month": 1,
@@ -69,7 +69,7 @@
       "year": 2026,
       "employee": "LEE KIAN HOW",
       "leaveType": "ANNU",
-      "displayName": "LEE KIAN HOW",
+      "displayName": "Kian How",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -276,6 +276,17 @@
       "fullDate": "2026-01-21",
       "month": 1,
       "year": 2026,
+      "employee": "LEE KIAN HOW",
+      "leaveType": "ANNU",
+      "displayName": "Kian How",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 21,
+      "fullDate": "2026-01-21",
+      "month": 1,
+      "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "ANNU",
       "displayName": "Eliyazar",
@@ -474,6 +485,28 @@
       "fullDate": "2026-01-30",
       "month": 1,
       "year": 2026,
+      "employee": "CHIN WAI MUN",
+      "leaveType": "CCLE",
+      "displayName": "Wai Mun",
+      "leaveTypeName": "CCLE",
+      "color": "#999999"
+    },
+    {
+      "date": 30,
+      "fullDate": "2026-01-30",
+      "month": 1,
+      "year": 2026,
+      "employee": "JOHN YANG JIA HAN",
+      "leaveType": "ANNU",
+      "displayName": "John",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 30,
+      "fullDate": "2026-01-30",
+      "month": 1,
+      "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "CCL",
       "displayName": "Eliyazar",
@@ -488,6 +521,17 @@
       "employee": "NEO ZHI KAI",
       "leaveType": "ANNU",
       "displayName": "NEO ZHI KAI",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 30,
+      "fullDate": "2026-01-30",
+      "month": 1,
+      "year": 2026,
+      "employee": "WU JIAN",
+      "leaveType": "ANNU",
+      "displayName": "WU JIAN",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -520,7 +564,7 @@
       "year": 2026,
       "employee": "LEE KIAN HOW",
       "leaveType": "ANNU",
-      "displayName": "LEE KIAN HOW",
+      "displayName": "Kian How",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -628,6 +672,17 @@
       "fullDate": "2026-02-20",
       "month": 2,
       "year": 2026,
+      "employee": "CHIN WAI MUN",
+      "leaveType": "ANNU",
+      "displayName": "Wai Mun",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 20,
+      "fullDate": "2026-02-20",
+      "month": 2,
+      "year": 2026,
       "employee": "JOHN YANG JIA HAN",
       "leaveType": "ANNU",
       "displayName": "John",
@@ -641,7 +696,7 @@
       "year": 2026,
       "employee": "LEE KIAN HOW",
       "leaveType": "ANNU",
-      "displayName": "LEE KIAN HOW",
+      "displayName": "Kian How",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -795,7 +850,7 @@
       "year": 2026,
       "employee": "LEE KIAN HOW",
       "leaveType": "ANNU",
-      "displayName": "LEE KIAN HOW",
+      "displayName": "Kian How",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -905,7 +960,7 @@
       "year": 2026,
       "employee": "CHIN WAI MUN",
       "leaveType": "ANNU",
-      "displayName": "CHIN WAI MUN",
+      "displayName": "Wai Mun",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -927,7 +982,7 @@
       "year": 2026,
       "employee": "CHIN WAI MUN",
       "leaveType": "ANNU",
-      "displayName": "CHIN WAI MUN",
+      "displayName": "Wai Mun",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -949,7 +1004,7 @@
       "year": 2026,
       "employee": "CHIN WAI MUN",
       "leaveType": "ANNU",
-      "displayName": "CHIN WAI MUN",
+      "displayName": "Wai Mun",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -971,7 +1026,7 @@
       "year": 2026,
       "employee": "CHIN WAI MUN",
       "leaveType": "ANNU",
-      "displayName": "CHIN WAI MUN",
+      "displayName": "Wai Mun",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -993,7 +1048,7 @@
       "year": 2026,
       "employee": "CHIN WAI MUN",
       "leaveType": "ANNU",
-      "displayName": "CHIN WAI MUN",
+      "displayName": "Wai Mun",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },

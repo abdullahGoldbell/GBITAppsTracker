@@ -27,7 +27,9 @@ class LeaveCalendar {
       'SARFARAZ ABDULLAH': 'Abdullah',
       'LIM YI HWEE (JOEY)': 'Joey',
       'TAN WEN XIAN (ALLEN)': 'Allen',
-      'CHUA SIN HAI': 'Sin Hai'
+      'CHUA SIN HAI': 'Sin Hai',
+      'LEE KIAN HOW': 'Kian How',
+      'CHIN WAI MUN': 'Wai Mun'
     };
 
     this.init();

@@ -44,7 +44,9 @@ const NAME_MAP = {
   'SARFARAZ ABDULLAH': 'Abdullah',
   'LIM YI HWEE (JOEY)': 'Joey',
   'TAN WEN XIAN (ALLEN)': 'Allen',
-  'CHUA SIN HAI': 'Sin Hai'
+  'CHUA SIN HAI': 'Sin Hai',
+  'LEE KIAN HOW': 'Kian How',
+  'CHIN WAI MUN': 'Wai Mun'
 };
 
 async function scrapeLeaveCalendar() {
@@ -388,6 +390,7 @@ async function scrapeLeaveCalendar() {
 
                 // Extract all leaves from popup
                 // Format in popup: <span class="Approvedtextsmall">EMPLOYEE NAME - LEAVE_TYPE</span>
+                // Note: Leave type may have (PM) suffix like "ANNU (PM)"
                 const popupLeaves = await popup.evaluate(() => {
                   const leaves = [];
 
@@ -396,8 +399,8 @@ async function scrapeLeaveCalendar() {
 
                   spans.forEach(span => {
                     const text = span.textContent.trim();
-                    // Format: "EMPLOYEE NAME - LEAVE_TYPE"
-                    const match = text.match(/^(.+?)\s*-\s*([A-Z0-9\s]+)$/);
+                    // Format: "EMPLOYEE NAME - LEAVE_TYPE" or "EMPLOYEE NAME - LEAVE_TYPE (PM)"
+                    const match = text.match(/^(.+?)\s*-\s*([A-Z0-9\s]+?)(?:\s*\(PM\))?$/);
                     if (match) {
                       const employee = match[1].trim();
                       const leaveType = match[2].trim();

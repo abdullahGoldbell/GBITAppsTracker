@@ -24,14 +24,14 @@ git pull origin main
 # Run scraper
 npm run scrape
 
-# Check if there are changes
-if git diff --quiet website/data/leaves.json; then
+# Check if there are changes to any data files
+if git diff --quiet website/data/ && [ -z "$(git ls-files --others --exclude-standard website/data/)" ]; then
     echo "$(date): No changes to leave data"
     exit 0
 fi
 
-# Commit and push
-git add website/data/leaves.json
+# Commit and push all data files
+git add website/data/
 git commit -m "Auto-update leave data - $(date +'%Y-%m-%d %H:%M')
 
 Co-Authored-By: HRIQ Scraper Bot <scraper@hriq.local>"

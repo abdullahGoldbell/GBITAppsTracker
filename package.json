@@ -1,0 +1,19 @@
+{
+  "name": "hriq-leave-calendar",
+  "version": "1.0.0",
+  "description": "HRIQ Leave Calendar Scraper and Display",
+  "main": "scraper/index.js",
+  "scripts": {
+    "scrape": "node scraper/index.js",
+    "scrape:all-months": "node scraper/index.js --all-months",
+    "serve": "npx serve website -l 3000",
+    "start": "npm run scrape && npm run serve"
+  },
+  "dependencies": {
+    "puppeteer": "^22.0.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

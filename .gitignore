@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Environment variables (contains credentials)
+.env
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
+
+# Debug files (screenshots from scraping)
+debug/
+
+# Claude Code settings
+.claude/

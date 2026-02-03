@@ -1,0 +1,244 @@
+{
+  "scrapedAt": "2026-01-30T05:04:11.914Z",
+  "month": "January",
+  "year": "2026",
+  "holidays": [
+    {
+      "date": 1,
+      "name": "New Year's Day(SG)"
+    }
+  ],
+  "leaves": [
+    {
+      "date": 6,
+      "employee": "JOHN YANG JIA HAN",
+      "leaveType": "NSL",
+      "leaveTypeName": "National Service Leave",
+      "color": "#1abc9c"
+    },
+    {
+      "date": 7,
+      "employee": "LEE CHIN HAI (EDDY)",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 12,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN (PM)",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 12,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "SL",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
+      "date": 12,
+      "employee": "TAN WEN XIAN (ALLEN)",
+      "leaveType": "SL",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
+      "date": 13,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 13,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "SL",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
+      "date": 14,
+      "employee": "LIM YI HWEE (JOEY)",
+      "leaveType": "SL",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
+      "date": 14,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 15,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 16,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 19,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 20,
+      "employee": "LEE CHIN HAI (EDDY)",
+      "leaveType": "WFH 2",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 20,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 21,
+      "employee": "JOHN YANG JIA HAN",
+      "leaveType": "SL",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
+      "date": 21,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 21,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 22,
+      "employee": "LEE CHIN HAI (EDDY)",
+      "leaveType": "SL",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
+      "date": 22,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 22,
+      "employee": "WU JIAN",
+      "leaveType": "WFH 2",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 23,
+      "employee": "JOHN YANG JIA HAN (PM)",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 23,
+      "employee": "LEE CHIN HAI (EDDY)",
+      "leaveType": "SL",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
+      "date": 23,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 26,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "CCL",
+      "leaveTypeName": "Childcare Leave",
+      "color": "#f39c12"
+    },
+    {
+      "date": 27,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "WFH 2",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 28,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 28,
+      "employee": "JOHN YANG JIA HAN",
+      "leaveType": "WFH 2",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 28,
+      "employee": "LIM YI HWEE (JOEY)",
+      "leaveType": "WFH 2",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 29,
+      "employee": "JOHN YANG JIA HAN",
+      "leaveType": "WFH 2",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 29,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 30,
+      "employee": "JOHN YANG JIA HAN (PM)",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 30,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "CCL",
+      "leaveTypeName": "Childcare Leave",
+      "color": "#f39c12"
+    },
+    {
+      "date": 30,
+      "employee": "WU JIAN (PM)",
+      "leaveType": "ANNU",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    }
+  ]
+}

@@ -166,11 +166,19 @@ async function scrapeLeaveCalendar() {
     // Wait for the calendar to load
     await page.waitForSelector('.calendar, table, [class*="calendar"]', { timeout: 10000 });
 
-    // Step 2.5: We'll scrape current month AND next month
-    console.log('📆 Will scrape current month and next month...');
+    // Step 2.5: We'll scrape previous month, current month, AND next month (3 months total)
+    console.log('📆 Will scrape previous month, current month, and next month...');
     const now = new Date();
     const currentMonth = now.getMonth() + 1; // 1-12
     const currentYear = now.getFullYear();
+
+    // Calculate previous month
+    let prevMonth = currentMonth - 1;
+    let prevYear = currentYear;
+    if (prevMonth < 1) {
+      prevMonth = 12;
+      prevYear = currentYear - 1;
+    }
 
     // Calculate next month
     let nextMonth = currentMonth + 1;
@@ -181,11 +189,12 @@ async function scrapeLeaveCalendar() {
     }
 
     const monthsToScrape = [
+      { month: prevMonth, year: prevYear },
       { month: currentMonth, year: currentYear },
       { month: nextMonth, year: nextYear }
     ];
 
-    // Combined data for both months
+    // Combined data for all months
     const allLeavesData = {
       scrapedAt: new Date().toISOString(),
       months: [],
@@ -462,6 +471,23 @@ async function scrapeLeaveCalendar() {
           }
         }
       });
+
+      // Save this month's data to its own file (archive)
+      const monthStr = String(monthData.month).padStart(2, '0');
+      const yearStr = monthData.year;
+      const monthFileName = `leaves-${yearStr}-${monthStr}.json`;
+      const monthFilePath = path.join(path.dirname(CONFIG.outputPath), monthFileName);
+
+      const monthFileData = {
+        scrapedAt: new Date().toISOString(),
+        month: parseInt(monthData.month),
+        year: parseInt(monthData.year),
+        monthName: monthData.monthName,
+        holidays: monthData.holidays,
+        leaves: monthData.leaves
+      };
+      fs.writeFileSync(monthFilePath, JSON.stringify(monthFileData, null, 2));
+      console.log(`💾 Saved ${monthFileName}`);
 
       // Add this month's data to combined data
       allLeavesData.months.push({

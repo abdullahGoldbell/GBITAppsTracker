@@ -1,22 +1,8 @@
 {
-  "scrapedAt": "2026-02-03T07:05:34.873Z",
-  "months": [
-    {
-      "month": 1,
-      "year": 2026,
-      "monthName": "January"
-    },
-    {
-      "month": 2,
-      "year": 2026,
-      "monthName": "February"
-    },
-    {
-      "month": 3,
-      "year": 2026,
-      "monthName": "March"
-    }
-  ],
+  "scrapedAt": "2026-02-03T07:05:39.450Z",
+  "month": 1,
+  "year": 2026,
+  "monthName": "January",
   "holidays": [
     {
       "date": 1,
@@ -24,41 +10,6 @@
       "month": 1,
       "year": 2026,
       "name": "New Year's Day(SG)"
-    },
-    {
-      "date": 16,
-      "fullDate": "2026-02-16",
-      "month": 2,
-      "year": 2026,
-      "name": "CNY Eve (Company Holiday)"
-    },
-    {
-      "date": 17,
-      "fullDate": "2026-02-17",
-      "month": 2,
-      "year": 2026,
-      "name": "Lunar New year (1st day)(SG)"
-    },
-    {
-      "date": 18,
-      "fullDate": "2026-02-18",
-      "month": 2,
-      "year": 2026,
-      "name": "Lunar New year (2nd day)(SG)"
-    },
-    {
-      "date": 19,
-      "fullDate": "2026-02-19",
-      "month": 2,
-      "year": 2026,
-      "name": "CNY (Company Holiday)"
-    },
-    {
-      "date": 21,
-      "fullDate": "2026-03-21",
-      "month": 3,
-      "year": 2026,
-      "name": "Hari Raya Puasa(SG)"
     }
   ],
   "leaves": [
@@ -338,50 +289,6 @@
       "color": "#9b59b6"
     },
     {
-      "date": 28,
-      "fullDate": "2026-01-28",
-      "month": 1,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 28,
-      "fullDate": "2026-01-28",
-      "month": 1,
-      "year": 2026,
-      "employee": "JOHN YANG JIA HAN",
-      "leaveType": "WFH 2",
-      "displayName": "John",
-      "leaveTypeName": "Work From Home",
-      "color": "#9b59b6"
-    },
-    {
-      "date": 28,
-      "fullDate": "2026-01-28",
-      "month": 1,
-      "year": 2026,
-      "employee": "LIM YI HWEE (JOEY)",
-      "leaveType": "WFH 2",
-      "displayName": "Joey",
-      "leaveTypeName": "Work From Home",
-      "color": "#9b59b6"
-    },
-    {
-      "date": 28,
-      "fullDate": "2026-01-28",
-      "month": 1,
-      "year": 2026,
-      "employee": "MOHD ELIYAZAR BIN RUSLAN",
-      "leaveType": "WFH 2",
-      "displayName": "MOHD ELIYAZAR BIN RUSLAN",
-      "leaveTypeName": "Work From Home",
-      "color": "#9b59b6"
-    },
-    {
       "date": 29,
       "fullDate": "2026-01-29",
       "month": 1,
@@ -437,20 +344,9 @@
       "color": "#3498db"
     },
     {
-      "date": 2,
-      "fullDate": "2026-02-02",
-      "month": 2,
-      "year": 2026,
-      "employee": "LIM YI HWEE (JOEY)",
-      "leaveType": "SL",
-      "displayName": "Joey",
-      "leaveTypeName": "Sick Leave",
-      "color": "#e74c3c"
-    },
-    {
-      "date": 4,
-      "fullDate": "2026-02-04",
-      "month": 2,
+      "date": 28,
+      "fullDate": "2026-01-28",
+      "month": 1,
       "year": 2026,
       "employee": "CHUA SIN HAI",
       "leaveType": "ANNU",
@@ -459,268 +355,37 @@
       "color": "#3498db"
     },
     {
-      "date": 5,
-      "fullDate": "2026-02-05",
-      "month": 2,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 5,
-      "fullDate": "2026-02-05",
-      "month": 2,
-      "year": 2026,
-      "employee": "LIM YI HWEE (JOEY)",
-      "leaveType": "WFH 2",
-      "displayName": "Joey",
-      "leaveTypeName": "Work From Home",
-      "color": "#9b59b6"
-    },
-    {
-      "date": 11,
-      "fullDate": "2026-02-11",
-      "month": 2,
-      "year": 2026,
-      "employee": "LEE CHIN HAI (EDDY)",
-      "leaveType": "CCL",
-      "displayName": "Eddy",
-      "leaveTypeName": "Childcare Leave",
-      "color": "#f39c12"
-    },
-    {
-      "date": 12,
-      "fullDate": "2026-02-12",
-      "month": 2,
-      "year": 2026,
-      "employee": "LIM YI HWEE (JOEY)",
-      "leaveType": "WFH 2",
-      "displayName": "Joey",
-      "leaveTypeName": "Work From Home",
-      "color": "#9b59b6"
-    },
-    {
-      "date": 12,
-      "fullDate": "2026-02-12",
-      "month": 2,
-      "year": 2026,
-      "employee": "SARFARAZ ABDULLAH",
-      "leaveType": "ANNU",
-      "displayName": "Abdullah",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 13,
-      "fullDate": "2026-02-13",
-      "month": 2,
-      "year": 2026,
-      "employee": "LIM YI HWEE (JOEY)",
-      "leaveType": "ANNU",
-      "displayName": "Joey",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 13,
-      "fullDate": "2026-02-13",
-      "month": 2,
-      "year": 2026,
-      "employee": "SARFARAZ ABDULLAH",
-      "leaveType": "ANNU",
-      "displayName": "Abdullah",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 20,
-      "fullDate": "2026-02-20",
-      "month": 2,
+      "date": 28,
+      "fullDate": "2026-01-28",
+      "month": 1,
       "year": 2026,
       "employee": "JOHN YANG JIA HAN",
-      "leaveType": "ANNU",
+      "leaveType": "WFH 2",
       "displayName": "John",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
     },
     {
-      "date": 20,
-      "fullDate": "2026-02-20",
-      "month": 2,
+      "date": 28,
+      "fullDate": "2026-01-28",
+      "month": 1,
       "year": 2026,
       "employee": "LIM YI HWEE (JOEY)",
-      "leaveType": "ANNU",
+      "leaveType": "WFH 2",
       "displayName": "Joey",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
     },
     {
-      "date": 20,
-      "fullDate": "2026-02-20",
-      "month": 2,
+      "date": 28,
+      "fullDate": "2026-01-28",
+      "month": 1,
       "year": 2026,
-      "employee": "SARFARAZ ABDULLAH",
-      "leaveType": "ANNU",
-      "displayName": "Abdullah",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 20,
-      "fullDate": "2026-02-20",
-      "month": 2,
-      "year": 2026,
-      "employee": "TAN WEN XIAN (ALLEN)",
-      "leaveType": "ANNU",
-      "displayName": "Allen",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 23,
-      "fullDate": "2026-02-23",
-      "month": 2,
-      "year": 2026,
-      "employee": "TAN WEN XIAN (ALLEN)",
-      "leaveType": "ANNU",
-      "displayName": "Allen",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 25,
-      "fullDate": "2026-02-25",
-      "month": 2,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 26,
-      "fullDate": "2026-02-26",
-      "month": 2,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 11,
-      "fullDate": "2026-03-11",
-      "month": 3,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 12,
-      "fullDate": "2026-03-12",
-      "month": 3,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 16,
-      "fullDate": "2026-03-16",
-      "month": 3,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 17,
-      "fullDate": "2026-03-17",
-      "month": 3,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 18,
-      "fullDate": "2026-03-18",
-      "month": 3,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 19,
-      "fullDate": "2026-03-19",
-      "month": 3,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 20,
-      "fullDate": "2026-03-20",
-      "month": 3,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 23,
-      "fullDate": "2026-03-23",
-      "month": 3,
-      "year": 2026,
-      "employee": "WU JIAN",
-      "leaveType": "ANNU",
-      "displayName": "WU JIAN",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 25,
-      "fullDate": "2026-03-25",
-      "month": 3,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 26,
-      "fullDate": "2026-03-26",
-      "month": 3,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "WFH 2",
+      "displayName": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
     }
   ]
 }

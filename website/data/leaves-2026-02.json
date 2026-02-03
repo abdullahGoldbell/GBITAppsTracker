@@ -1,0 +1,214 @@
+{
+  "scrapedAt": "2026-02-03T07:05:43.969Z",
+  "month": 2,
+  "year": 2026,
+  "monthName": "February",
+  "holidays": [
+    {
+      "date": 17,
+      "fullDate": "2026-02-17",
+      "month": 2,
+      "year": 2026,
+      "name": "Lunar New year (1st day)(SG)"
+    },
+    {
+      "date": 18,
+      "fullDate": "2026-02-18",
+      "month": 2,
+      "year": 2026,
+      "name": "Lunar New year (2nd day)(SG)"
+    },
+    {
+      "date": 16,
+      "fullDate": "2026-02-16",
+      "month": 2,
+      "year": 2026,
+      "name": "CNY Eve (Company Holiday)"
+    },
+    {
+      "date": 19,
+      "fullDate": "2026-02-19",
+      "month": 2,
+      "year": 2026,
+      "name": "CNY (Company Holiday)"
+    }
+  ],
+  "leaves": [
+    {
+      "date": 2,
+      "fullDate": "2026-02-02",
+      "month": 2,
+      "year": 2026,
+      "employee": "LIM YI HWEE (JOEY)",
+      "leaveType": "SL",
+      "displayName": "Joey",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
+      "date": 4,
+      "fullDate": "2026-02-04",
+      "month": 2,
+      "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "displayName": "Sin Hai",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 5,
+      "fullDate": "2026-02-05",
+      "month": 2,
+      "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "displayName": "Sin Hai",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 5,
+      "fullDate": "2026-02-05",
+      "month": 2,
+      "year": 2026,
+      "employee": "LIM YI HWEE (JOEY)",
+      "leaveType": "WFH 2",
+      "displayName": "Joey",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 11,
+      "fullDate": "2026-02-11",
+      "month": 2,
+      "year": 2026,
+      "employee": "LEE CHIN HAI (EDDY)",
+      "leaveType": "CCL",
+      "displayName": "Eddy",
+      "leaveTypeName": "Childcare Leave",
+      "color": "#f39c12"
+    },
+    {
+      "date": 12,
+      "fullDate": "2026-02-12",
+      "month": 2,
+      "year": 2026,
+      "employee": "LIM YI HWEE (JOEY)",
+      "leaveType": "WFH 2",
+      "displayName": "Joey",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 12,
+      "fullDate": "2026-02-12",
+      "month": 2,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "ANNU",
+      "displayName": "Abdullah",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 13,
+      "fullDate": "2026-02-13",
+      "month": 2,
+      "year": 2026,
+      "employee": "LIM YI HWEE (JOEY)",
+      "leaveType": "ANNU",
+      "displayName": "Joey",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 13,
+      "fullDate": "2026-02-13",
+      "month": 2,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "ANNU",
+      "displayName": "Abdullah",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 23,
+      "fullDate": "2026-02-23",
+      "month": 2,
+      "year": 2026,
+      "employee": "TAN WEN XIAN (ALLEN)",
+      "leaveType": "ANNU",
+      "displayName": "Allen",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 25,
+      "fullDate": "2026-02-25",
+      "month": 2,
+      "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "displayName": "Sin Hai",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 26,
+      "fullDate": "2026-02-26",
+      "month": 2,
+      "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "displayName": "Sin Hai",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 20,
+      "fullDate": "2026-02-20",
+      "month": 2,
+      "year": 2026,
+      "employee": "JOHN YANG JIA HAN",
+      "leaveType": "ANNU",
+      "displayName": "John",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 20,
+      "fullDate": "2026-02-20",
+      "month": 2,
+      "year": 2026,
+      "employee": "LIM YI HWEE (JOEY)",
+      "leaveType": "ANNU",
+      "displayName": "Joey",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 20,
+      "fullDate": "2026-02-20",
+      "month": 2,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "ANNU",
+      "displayName": "Abdullah",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 20,
+      "fullDate": "2026-02-20",
+      "month": 2,
+      "year": 2026,
+      "employee": "TAN WEN XIAN (ALLEN)",
+      "leaveType": "ANNU",
+      "displayName": "Allen",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    }
+  ]
+}

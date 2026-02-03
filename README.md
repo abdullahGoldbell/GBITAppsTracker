@@ -1,6 +1,6 @@
-# HRIQ Leave Calendar
+# Team Leave Calendar
 
-A web scraper and display website for the HRIQ Leave Calendar (GROUP IT Department).
+A leave calendar display for the GROUP IT Department.
 
 ## Setup
 
@@ -9,13 +9,13 @@ A web scraper and display website for the HRIQ Leave Calendar (GROUP IT Departme
    npm install
    ```
 
-2. **Configure credentials:**
+2. **Configure environment:**
    ```bash
    cp .env.example .env
-   # Edit .env with your HRIQ credentials
+   # Edit .env with your credentials
    ```
 
-3. **Run the scraper:**
+3. **Sync data:**
    ```bash
    npm run scrape
    ```
@@ -25,35 +25,6 @@ A web scraper and display website for the HRIQ Leave Calendar (GROUP IT Departme
    npm run serve
    # Open http://localhost:3000
    ```
-
-## Scheduled Scraping
-
-To run the scraper daily, add a cron job:
-
-```bash
-# Edit crontab
-crontab -e
-
-# Add this line to run at 7 AM daily
-0 7 * * * cd /Users/abdullah/Desktop/Abdullah\ AI\ Stuff/HRIQ && /usr/local/bin/npm run scrape >> /tmp/hriq-scrape.log 2>&1
-```
-
-## Project Structure
-
-```
-HRIQ/
-├── scraper/
-│   └── index.js       # Puppeteer scraper
-├── website/
-│   ├── index.html     # Calendar display
-│   ├── styles.css     # Styling
-│   └── app.js         # Calendar logic
-├── data/
-│   └── leaves.json    # Scraped data
-├── .env               # Credentials (not committed)
-├── .env.example       # Credential template
-└── package.json
-```
 
 ## Features
 

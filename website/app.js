@@ -23,7 +23,6 @@ class LeaveCalendar {
     this.nameMap = {
       'JOHN YANG JIA HAN': 'John',
       'LEE CHIN HAI (EDDY)': 'Eddy',
-      'MOHD ELIYAZAR BIN ISMAIL': 'Eliyazar',
       'MOHD ELIYAZAR BIN RUSLAN': 'Eliyazar',
       'SARFARAZ ABDULLAH': 'Abdullah',
       'LIM YI HWEE (JOEY)': 'Joey',

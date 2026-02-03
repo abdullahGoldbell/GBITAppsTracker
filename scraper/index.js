@@ -30,6 +30,17 @@ const LEAVE_TYPES = {
   'HL': { name: 'Hospitalization Leave', color: '#ff5722' }
 };
 
+// Friendly name mapping (system name -> display name)
+const NAME_MAP = {
+  'JOHN YANG JIA HAN': 'John',
+  'LEE CHOON PHENG': 'Eddy',
+  'MOHD ELIYAZAR BIN ISMAIL': 'Eliyazar',
+  'SARFARAZ ABDULLAH': 'Abdullah',
+  'LIM YU XUAN, JOEY': 'Joey',
+  'TAN WEI LIANG': 'Allen',
+  'CHUA SIN HAI': 'Sin Hai'
+};
+
 async function scrapeLeaveCalendar() {
   // Validate credentials
   if (!CONFIG.credentials.userId || !CONFIG.credentials.password) {
@@ -123,6 +134,23 @@ async function scrapeLeaveCalendar() {
 
     // Wait for the calendar to load
     await page.waitForSelector('.calendar, table, [class*="calendar"]', { timeout: 10000 });
+
+    // Step 2.5: Select current month and year
+    console.log('📆 Setting to current month...');
+    const now = new Date();
+    const currentMonth = now.getMonth() + 1; // 1-12
+    const currentYear = now.getFullYear();
+
+    try {
+      // Select current month
+      await page.select('#ddlMonth', currentMonth.toString());
+      // Select current year
+      await page.select('#ddlYear', currentYear.toString());
+      console.log(`📆 Selected: ${currentMonth}/${currentYear}`);
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    } catch (e) {
+      console.log('⚠️ Could not set month/year dropdowns, using default...');
+    }
 
     // Step 3: Set filter to "View all employees within my Department"
     console.log('🔧 Setting department filter...');
@@ -259,9 +287,10 @@ async function scrapeLeaveCalendar() {
       return data;
     });
 
-    // Enrich with leave type metadata
+    // Enrich with leave type metadata and display names
     calendarData.leaves = calendarData.leaves.map(leave => ({
       ...leave,
+      displayName: NAME_MAP[leave.employee] || leave.employee,
       leaveTypeName: LEAVE_TYPES[leave.leaveType]?.name || leave.leaveType,
       color: LEAVE_TYPES[leave.leaveType]?.color || '#999999'
     }));

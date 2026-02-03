@@ -17,6 +17,17 @@ class LeaveCalendar {
       'HL': { name: 'Hospitalization Leave', color: '#ff5722' }
     };
 
+    // Friendly name mapping
+    this.nameMap = {
+      'JOHN YANG JIA HAN': 'John',
+      'LEE CHOON PHENG': 'Eddy',
+      'MOHD ELIYAZAR BIN ISMAIL': 'Eliyazar',
+      'SARFARAZ ABDULLAH': 'Abdullah',
+      'LIM YU XUAN, JOEY': 'Joey',
+      'TAN WEI LIANG': 'Allen',
+      'CHUA SIN HAI': 'Sin Hai'
+    };
+
     this.init();
   }
 
@@ -102,6 +113,7 @@ class LeaveCalendar {
     this.updateMonthDisplay();
     this.renderCalendar();
     this.updateStats();
+    this.renderTodaySidebar();
   }
 
   updateMonthDisplay() {
@@ -222,7 +234,7 @@ class LeaveCalendar {
 
     const name = document.createElement('span');
     name.className = 'employee-name';
-    name.textContent = this.formatName(leave.employee);
+    name.textContent = this.getDisplayName(leave);
     name.title = leave.employee; // Full name on hover
 
     const type = document.createElement('span');
@@ -236,10 +248,19 @@ class LeaveCalendar {
   }
 
   formatName(fullName) {
-    // Shorten long names: "JOHN YANG JIA HAN" -> "JOHN Y."
+    // Use friendly name if available
+    if (this.nameMap[fullName]) {
+      return this.nameMap[fullName];
+    }
+    // Fallback: Shorten long names
     const parts = fullName.split(' ');
     if (parts.length <= 2) return fullName;
     return `${parts[0]} ${parts[1].charAt(0)}.`;
+  }
+
+  getDisplayName(leave) {
+    // Use displayName from data if available, otherwise use nameMap
+    return leave.displayName || this.nameMap[leave.employee] || this.formatName(leave.employee);
   }
 
   getLeavesForDate(date) {
@@ -304,11 +325,12 @@ class LeaveCalendar {
     leaves.forEach(leave => {
       const color = this.leaveTypes[leave.leaveType]?.color || leave.color || '#999';
       const typeName = this.leaveTypes[leave.leaveType]?.name || leave.leaveType;
+      const displayName = this.getDisplayName(leave);
       html += `
         <div class="modal-leave-item">
           <div class="modal-leave-color" style="background: ${color};"></div>
           <div class="modal-leave-info">
-            <div class="modal-leave-name">${leave.employee}</div>
+            <div class="modal-leave-name">${displayName}</div>
             <div class="modal-leave-type">${typeName}</div>
           </div>
         </div>
@@ -357,6 +379,64 @@ class LeaveCalendar {
       if (!isWeekend && !isHoliday) workingDays++;
     }
     document.getElementById('workingDays').textContent = workingDays;
+  }
+
+  renderTodaySidebar() {
+    const sidebar = document.getElementById('todaySidebar');
+    if (!sidebar) return;
+
+    const today = new Date();
+    const todayLeaves = this.getLeavesForDate(today);
+    const todayHoliday = this.getHolidayForDate(today);
+
+    // Format today's date
+    const options = { weekday: 'long', month: 'short', day: 'numeric' };
+    const dateStr = today.toLocaleDateString('en-US', options);
+
+    let html = `
+      <div class="sidebar-date">${dateStr}</div>
+    `;
+
+    if (todayHoliday) {
+      html += `
+        <div class="sidebar-holiday">
+          <span class="holiday-icon">🎉</span>
+          <span>${todayHoliday.name}</span>
+        </div>
+      `;
+    }
+
+    if (todayLeaves.length === 0 && !todayHoliday) {
+      html += `
+        <div class="sidebar-empty">
+          <div class="empty-icon">✓</div>
+          <div class="empty-text">Everyone's in today!</div>
+        </div>
+      `;
+    } else if (todayLeaves.length > 0) {
+      html += `<div class="sidebar-section-title">On Leave Today</div>`;
+      html += `<div class="sidebar-leaves">`;
+
+      todayLeaves.forEach(leave => {
+        const color = this.leaveTypes[leave.leaveType]?.color || leave.color || '#999';
+        const typeName = this.leaveTypes[leave.leaveType]?.name || leave.leaveType;
+        const displayName = this.getDisplayName(leave);
+
+        html += `
+          <div class="sidebar-leave-item">
+            <div class="sidebar-leave-color" style="background: ${color};"></div>
+            <div class="sidebar-leave-info">
+              <div class="sidebar-leave-name">${displayName}</div>
+              <div class="sidebar-leave-type">${typeName}</div>
+            </div>
+          </div>
+        `;
+      });
+
+      html += `</div>`;
+    }
+
+    sidebar.innerHTML = html;
   }
 }
 

@@ -246,10 +246,11 @@ class LeaveCalendar {
       cell.appendChild(entriesContainer);
     }
 
-    // Click to show modal
+    // Click to show modal - create a copy of the date to avoid closure issues
     if (dayLeaves.length > 0 || dayHoliday) {
+      const clickDate = new Date(date.getTime());
       cell.addEventListener('click', () => {
-        this.showDayModal(date, dayLeaves, dayHoliday);
+        this.showDayModal(clickDate, dayLeaves, dayHoliday);
       });
     }
 

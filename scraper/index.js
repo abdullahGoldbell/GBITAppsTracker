@@ -52,7 +52,12 @@ async function scrapeLeaveCalendar() {
 
   const browser = await puppeteer.launch({
     headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--ignore-certificate-errors',
+      '--ignore-certificate-errors-spki-list'
+    ]
   });
 
   try {

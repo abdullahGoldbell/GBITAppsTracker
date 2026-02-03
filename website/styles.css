@@ -567,6 +567,9 @@ body {
   gap: 3px;
   max-height: 72px;
   overflow-y: auto;
+  overflow-x: hidden;
+  contain: content;
+  will-change: scroll-position;
 }
 
 .leave-entries::-webkit-scrollbar {
@@ -586,13 +589,11 @@ body {
   background: var(--color-bg-warm);
   border-radius: 4px;
   border-left: 3px solid var(--leave-annual);
-  transition: var(--transition-fast);
   min-width: 0;
   overflow: hidden;
-}
-
-.leave-entry:hover {
-  transform: translateX(2px);
+  flex-shrink: 0;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .employee-name {

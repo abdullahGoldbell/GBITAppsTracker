@@ -56,12 +56,22 @@ async function scrapeLeaveCalendar() {
       '--no-sandbox',
       '--disable-setuid-sandbox',
       '--ignore-certificate-errors',
-      '--ignore-certificate-errors-spki-list'
+      '--ignore-certificate-errors-spki-list',
+      '--disable-blink-features=AutomationControlled',
+      '--disable-web-security',
+      '--disable-features=IsolateOrigins,site-per-process',
+      '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     ]
   });
 
   try {
     const page = await browser.newPage();
+
+    // Hide webdriver property to avoid detection
+    await page.evaluateOnNewDocument(() => {
+      Object.defineProperty(navigator, 'webdriver', { get: () => false });
+    });
+
     await page.setViewport({ width: 1920, height: 1080 });
 
     // Step 1: Login

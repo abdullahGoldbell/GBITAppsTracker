@@ -166,189 +166,228 @@ async function scrapeLeaveCalendar() {
     // Wait for the calendar to load
     await page.waitForSelector('.calendar, table, [class*="calendar"]', { timeout: 10000 });
 
-    // Step 2.5: Select current month and year
-    console.log('📆 Setting to current month...');
+    // Step 2.5: We'll scrape current month AND next month
+    console.log('📆 Will scrape current month and next month...');
     const now = new Date();
     const currentMonth = now.getMonth() + 1; // 1-12
     const currentYear = now.getFullYear();
 
-    try {
-      // Select current month
-      await page.select('#ddlMonth', currentMonth.toString());
-      // Select current year
-      await page.select('#ddlYear', currentYear.toString());
-      console.log(`📆 Selected: ${currentMonth}/${currentYear}`);
-      await new Promise(resolve => setTimeout(resolve, 1000));
-    } catch (e) {
-      console.log('⚠️ Could not set month/year dropdowns, using default...');
+    // Calculate next month
+    let nextMonth = currentMonth + 1;
+    let nextYear = currentYear;
+    if (nextMonth > 12) {
+      nextMonth = 1;
+      nextYear = currentYear + 1;
     }
 
-    // Step 3: Set filter to "View all employees within my Department"
-    console.log('🔧 Setting department filter...');
-    try {
-      // Check the department checkbox if not already checked
-      const deptCheckbox = await page.$('input[type="checkbox"][id*="Department"], input[type="checkbox"]:nth-of-type(3)');
-      if (deptCheckbox) {
-        const isChecked = await page.evaluate(el => el.checked, deptCheckbox);
-        if (!isChecked) {
-          await deptCheckbox.click();
-        }
+    const monthsToScrape = [
+      { month: currentMonth, year: currentYear },
+      { month: nextMonth, year: nextYear }
+    ];
+
+    // Combined data for both months
+    const allLeavesData = {
+      scrapedAt: new Date().toISOString(),
+      months: [],
+      holidays: [],
+      leaves: []
+    };
+
+    for (const monthInfo of monthsToScrape) {
+      console.log(`📆 Scraping ${monthInfo.month}/${monthInfo.year}...`);
+
+      try {
+        // Select month
+        await page.select('#ddlMonth', monthInfo.month.toString());
+        // Select year
+        await page.select('#ddlYear', monthInfo.year.toString());
+        console.log(`📆 Selected: ${monthInfo.month}/${monthInfo.year}`);
+        await new Promise(resolve => setTimeout(resolve, 1000));
+      } catch (e) {
+        console.log('⚠️ Could not set month/year dropdowns, using default...');
       }
 
-      // Click Show button to refresh calendar
-      const showButton = await page.$('input[value="Show"]')
-        || await page.$('input[value*="Show"]')
-        || await page.$('.btn-show');
-
-      if (showButton) {
-        await Promise.all([
-          page.waitForNavigation({ waitUntil: 'networkidle2', timeout: 5000 }).catch(() => {}),
-          showButton.click()
-        ]);
-        await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for calendar to update
-      }
-    } catch (e) {
-      console.log('⚠️ Could not set department filter, continuing with default view...');
-    }
-
-    // Step 4: Extract calendar data
-    console.log('📊 Extracting leave data...');
-
-    // Debug: Save screenshot and HTML
-    const debugDir = path.join(__dirname, '..', 'debug');
-    if (!fs.existsSync(debugDir)) {
-      fs.mkdirSync(debugDir, { recursive: true });
-    }
-    await page.screenshot({ path: path.join(debugDir, 'calendar.png'), fullPage: true });
-    const html = await page.content();
-    fs.writeFileSync(path.join(debugDir, 'calendar.html'), html);
-    console.log('📸 Debug screenshot and HTML saved to debug/ folder');
-
-    const calendarData = await page.evaluate(() => {
-      const data = {
-        scrapedAt: new Date().toISOString(),
-        month: '',
-        year: '',
-        holidays: [],
-        leaves: []
-      };
-
-      // Get month/year from dropdowns
-      const monthDropdown = document.querySelector('#ddlMonth');
-      const yearDropdown = document.querySelector('#ddlYear');
-      if (monthDropdown && yearDropdown) {
-        data.month = monthDropdown.value || ''; // numeric month (1-12)
-        data.monthName = monthDropdown.options[monthDropdown.selectedIndex]?.text || '';
-        data.year = yearDropdown.value || '';
-      }
-
-      // Get the calendar table
-      const calendarTable = document.querySelector('#tblCalendar');
-      if (!calendarTable) {
-        console.log('Calendar table not found');
-        return data;
-      }
-
-      // Get all calendar cells (td elements in tblCalendar)
-      const cells = calendarTable.querySelectorAll('td[valign="top"]');
-
-      cells.forEach(cell => {
-        // Get the date from blacktextsmall or redtextsmall span
-        const dateSpan = cell.querySelector('span.blacktextsmall, span.redtextsmall');
-        if (!dateSpan) return;
-
-        const dateText = dateSpan.textContent.trim();
-        // Extract just the number (date might include holiday name like "1   New Year's Day(SG)")
-        const dateMatch = dateText.match(/^(\d{1,2})/);
-        if (!dateMatch) return;
-
-        const date = parseInt(dateMatch[1]);
-
-        // Check for holidays (redtextsmall with holiday name)
-        const holidaySpan = cell.querySelector('span.redtextsmall');
-        if (holidaySpan) {
-          const holidayText = holidaySpan.textContent.trim();
-          const holidayMatch = holidayText.match(/\d+\s+(.+)/);
-          if (holidayMatch) {
-            const monthNum = data.month.toString().padStart(2, '0');
-            const dayNum = date.toString().padStart(2, '0');
-            data.holidays.push({
-              date: date,
-              fullDate: `${data.year}-${monthNum}-${dayNum}`,
-              month: parseInt(data.month),
-              year: parseInt(data.year),
-              name: holidayMatch[1].trim()
-            });
+      // Step 3: Set filter to "View all employees within my Department"
+      console.log('🔧 Setting department filter...');
+      try {
+        // Check the department checkbox if not already checked
+        const deptCheckbox = await page.$('input[type="checkbox"][id*="Department"], input[type="checkbox"]:nth-of-type(3)');
+        if (deptCheckbox) {
+          const isChecked = await page.evaluate(el => el.checked, deptCheckbox);
+          if (!isChecked) {
+            await deptCheckbox.click();
           }
         }
 
-        // Extract leave entries - they're in nested tables with Approvedtextsmall spans
-        const leaveRows = cell.querySelectorAll('table tr');
+        // Click Show button to refresh calendar
+        const showButton = await page.$('input[value="Show"]')
+          || await page.$('input[value*="Show"]')
+          || await page.$('.btn-show');
 
-        leaveRows.forEach(row => {
-          const nameSpan = row.querySelector('td[width="70%"] span.Approvedtextsmall');
-          const typeSpan = row.querySelector('td[width="25%"] span.Approvedtextsmall');
+        if (showButton) {
+          await Promise.all([
+            page.waitForNavigation({ waitUntil: 'networkidle2', timeout: 5000 }).catch(() => {}),
+            showButton.click()
+          ]);
+          await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for calendar to update
+        }
+      } catch (e) {
+        console.log('⚠️ Could not set department filter, continuing with default view...');
+      }
 
-          if (nameSpan && typeSpan) {
-            const employee = nameSpan.textContent.trim();
-            let leaveType = typeSpan.textContent.trim();
+      // Step 4: Extract calendar data for this month
+      console.log('📊 Extracting leave data...');
 
-            // Remove leading " - " from leave type
-            leaveType = leaveType.replace(/^\s*-\s*/, '');
+      // Debug: Save screenshot and HTML
+      const debugDir = path.join(__dirname, '..', 'debug');
+      if (!fs.existsSync(debugDir)) {
+        fs.mkdirSync(debugDir, { recursive: true });
+      }
+      await page.screenshot({ path: path.join(debugDir, `calendar-${monthInfo.month}-${monthInfo.year}.png`), fullPage: true });
+      const html = await page.content();
+      fs.writeFileSync(path.join(debugDir, `calendar-${monthInfo.month}-${monthInfo.year}.html`), html);
+      console.log('📸 Debug screenshot and HTML saved to debug/ folder');
 
-            if (employee && leaveType) {
-              // Create full date string (YYYY-MM-DD)
+      const monthData = await page.evaluate(() => {
+        const data = {
+          month: '',
+          year: '',
+          monthName: '',
+          holidays: [],
+          leaves: []
+        };
+
+        // Get month/year from dropdowns
+        const monthDropdown = document.querySelector('#ddlMonth');
+        const yearDropdown = document.querySelector('#ddlYear');
+        if (monthDropdown && yearDropdown) {
+          data.month = monthDropdown.value || ''; // numeric month (1-12)
+          data.monthName = monthDropdown.options[monthDropdown.selectedIndex]?.text || '';
+          data.year = yearDropdown.value || '';
+        }
+
+        // Get the calendar table
+        const calendarTable = document.querySelector('#tblCalendar');
+        if (!calendarTable) {
+          console.log('Calendar table not found');
+          return data;
+        }
+
+        // Get all calendar cells (td elements in tblCalendar)
+        const cells = calendarTable.querySelectorAll('td[valign="top"]');
+
+        cells.forEach(cell => {
+          // Get the date from blacktextsmall or redtextsmall span
+          const dateSpan = cell.querySelector('span.blacktextsmall, span.redtextsmall');
+          if (!dateSpan) return;
+
+          const dateText = dateSpan.textContent.trim();
+          // Extract just the number (date might include holiday name like "1   New Year's Day(SG)")
+          const dateMatch = dateText.match(/^(\d{1,2})/);
+          if (!dateMatch) return;
+
+          const date = parseInt(dateMatch[1]);
+
+          // Check for holidays (redtextsmall with holiday name)
+          const holidaySpan = cell.querySelector('span.redtextsmall');
+          if (holidaySpan) {
+            const holidayText = holidaySpan.textContent.trim();
+            const holidayMatch = holidayText.match(/\d+\s+(.+)/);
+            if (holidayMatch) {
               const monthNum = data.month.toString().padStart(2, '0');
               const dayNum = date.toString().padStart(2, '0');
-              const fullDate = `${data.year}-${monthNum}-${dayNum}`;
-
-              data.leaves.push({
+              data.holidays.push({
                 date: date,
-                fullDate: fullDate,
+                fullDate: `${data.year}-${monthNum}-${dayNum}`,
                 month: parseInt(data.month),
                 year: parseInt(data.year),
-                employee: employee,
-                leaveType: leaveType
+                name: holidayMatch[1].trim()
               });
             }
           }
+
+          // Extract leave entries - they're in nested tables with Approvedtextsmall spans
+          const leaveRows = cell.querySelectorAll('table tr');
+
+          leaveRows.forEach(row => {
+            const nameSpan = row.querySelector('td[width="70%"] span.Approvedtextsmall');
+            const typeSpan = row.querySelector('td[width="25%"] span.Approvedtextsmall');
+
+            if (nameSpan && typeSpan) {
+              const employee = nameSpan.textContent.trim();
+              let leaveType = typeSpan.textContent.trim();
+
+              // Remove leading " - " from leave type
+              leaveType = leaveType.replace(/^\s*-\s*/, '');
+
+              if (employee && leaveType) {
+                // Create full date string (YYYY-MM-DD)
+                const monthNum = data.month.toString().padStart(2, '0');
+                const dayNum = date.toString().padStart(2, '0');
+                const fullDate = `${data.year}-${monthNum}-${dayNum}`;
+
+                data.leaves.push({
+                  date: date,
+                  fullDate: fullDate,
+                  month: parseInt(data.month),
+                  year: parseInt(data.year),
+                  employee: employee,
+                  leaveType: leaveType
+                });
+              }
+            }
+          });
         });
+
+        return data;
       });
 
-      return data;
-    });
+      // Enrich with leave type metadata and display names
+      monthData.leaves = monthData.leaves.map(leave => ({
+        ...leave,
+        displayName: NAME_MAP[leave.employee] || leave.employee,
+        leaveTypeName: LEAVE_TYPES[leave.leaveType]?.name || leave.leaveType,
+        color: LEAVE_TYPES[leave.leaveType]?.color || '#999999'
+      }));
 
-    // Enrich with leave type metadata and display names
-    calendarData.leaves = calendarData.leaves.map(leave => ({
-      ...leave,
-      displayName: NAME_MAP[leave.employee] || leave.employee,
-      leaveTypeName: LEAVE_TYPES[leave.leaveType]?.name || leave.leaveType,
-      color: LEAVE_TYPES[leave.leaveType]?.color || '#999999'
-    }));
-
-    // Add company-declared holidays for current month
-    const calMonth = parseInt(calendarData.month);
-    const calYear = parseInt(calendarData.year);
-    COMPANY_HOLIDAYS.forEach(holiday => {
-      if (holiday.month === calMonth && holiday.year === calYear) {
-        // Check if not already in holidays list
-        const exists = calendarData.holidays.some(h =>
-          h.date === holiday.date && h.month === holiday.month && h.year === holiday.year
-        );
-        if (!exists) {
-          calendarData.holidays.push({
-            date: holiday.date,
-            fullDate: `${holiday.year}-${String(holiday.month).padStart(2, '0')}-${String(holiday.date).padStart(2, '0')}`,
-            month: holiday.month,
-            year: holiday.year,
-            name: holiday.name
-          });
+      // Add company-declared holidays for this month
+      const calMonth = parseInt(monthData.month);
+      const calYear = parseInt(monthData.year);
+      COMPANY_HOLIDAYS.forEach(holiday => {
+        if (holiday.month === calMonth && holiday.year === calYear) {
+          // Check if not already in holidays list
+          const exists = monthData.holidays.some(h =>
+            h.date === holiday.date && h.month === holiday.month && h.year === holiday.year
+          );
+          if (!exists) {
+            monthData.holidays.push({
+              date: holiday.date,
+              fullDate: `${holiday.year}-${String(holiday.month).padStart(2, '0')}-${String(holiday.date).padStart(2, '0')}`,
+              month: holiday.month,
+              year: holiday.year,
+              name: holiday.name
+            });
+          }
         }
-      }
-    });
+      });
 
-    // Sort holidays by date
-    calendarData.holidays.sort((a, b) => a.date - b.date);
+      // Add this month's data to combined data
+      allLeavesData.months.push({
+        month: parseInt(monthData.month),
+        year: parseInt(monthData.year),
+        monthName: monthData.monthName
+      });
+      allLeavesData.holidays.push(...monthData.holidays);
+      allLeavesData.leaves.push(...monthData.leaves);
+
+      console.log(`📊 Found ${monthData.leaves.length} leave entries for ${monthData.monthName} ${monthData.year}`);
+    } // End of monthsToScrape loop
+
+    // Sort holidays by fullDate
+    allLeavesData.holidays.sort((a, b) => a.fullDate.localeCompare(b.fullDate));
+
+    // Sort leaves by fullDate
+    allLeavesData.leaves.sort((a, b) => a.fullDate.localeCompare(b.fullDate));
 
     // Step 5: Save data
     console.log('💾 Saving data...');
@@ -360,13 +399,13 @@ async function scrapeLeaveCalendar() {
     }
 
     // Save to JSON
-    fs.writeFileSync(CONFIG.outputPath, JSON.stringify(calendarData, null, 2));
+    fs.writeFileSync(CONFIG.outputPath, JSON.stringify(allLeavesData, null, 2));
 
     console.log(`✅ Data saved to ${CONFIG.outputPath}`);
-    console.log(`📊 Found ${calendarData.leaves.length} leave entries`);
-    console.log(`🎉 Holidays: ${calendarData.holidays.length}`);
+    console.log(`📊 Total: ${allLeavesData.leaves.length} leave entries across ${allLeavesData.months.length} months`);
+    console.log(`🎉 Holidays: ${allLeavesData.holidays.length}`);
 
-    return calendarData;
+    return allLeavesData;
 
   } catch (error) {
     console.error('❌ Error:', error.message);

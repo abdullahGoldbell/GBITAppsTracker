@@ -10,10 +10,11 @@
     "start": "npm run scrape && npm run serve"
   },
   "dependencies": {
-    "puppeteer": "^22.0.0",
-    "dotenv": "^16.4.0"
+    "dotenv": "^16.4.0",
+    "puppeteer": "^22.0.0"
   },
   "devDependencies": {
+    "pm2": "^6.0.14",
     "serve": "^14.2.0"
   }
 }

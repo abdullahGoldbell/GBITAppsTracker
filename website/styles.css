@@ -296,6 +296,34 @@ body {
   overflow: hidden;
 }
 
+/* Two Month Layout */
+.two-month-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: #eee;
+}
+
+.month-wrapper {
+  background: white;
+}
+
+.month-title {
+  padding: 12px 15px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c3e50;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .two-month-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 .calendar-header-row {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -371,6 +399,17 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  max-height: 85px;
+  overflow-y: auto;
+}
+
+.leave-entries::-webkit-scrollbar {
+  width: 4px;
+}
+
+.leave-entries::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 2px;
 }
 
 .leave-entry {

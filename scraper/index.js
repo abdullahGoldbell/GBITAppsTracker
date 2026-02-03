@@ -248,20 +248,22 @@ async function scrapeLeaveCalendar() {
       fs.writeFileSync(path.join(debugDir, `calendar-${monthInfo.month}-${monthInfo.year}.html`), html);
       console.log('📸 Debug screenshot and HTML saved to debug/ folder');
 
-      const monthData = await page.evaluate(() => {
+      // First, get basic month info and find cells with "More" links
+      const basicData = await page.evaluate(() => {
         const data = {
           month: '',
           year: '',
           monthName: '',
           holidays: [],
-          leaves: []
+          leaves: [],
+          datesWithMore: [] // Track dates that have "More" links
         };
 
         // Get month/year from dropdowns
         const monthDropdown = document.querySelector('#ddlMonth');
         const yearDropdown = document.querySelector('#ddlYear');
         if (monthDropdown && yearDropdown) {
-          data.month = monthDropdown.value || ''; // numeric month (1-12)
+          data.month = monthDropdown.value || '';
           data.monthName = monthDropdown.options[monthDropdown.selectedIndex]?.text || '';
           data.year = yearDropdown.value || '';
         }
@@ -273,22 +275,20 @@ async function scrapeLeaveCalendar() {
           return data;
         }
 
-        // Get all calendar cells (td elements in tblCalendar)
+        // Get all calendar cells
         const cells = calendarTable.querySelectorAll('td[valign="top"]');
 
         cells.forEach(cell => {
-          // Get the date from blacktextsmall or redtextsmall span
           const dateSpan = cell.querySelector('span.blacktextsmall, span.redtextsmall');
           if (!dateSpan) return;
 
           const dateText = dateSpan.textContent.trim();
-          // Extract just the number (date might include holiday name like "1   New Year's Day(SG)")
           const dateMatch = dateText.match(/^(\d{1,2})/);
           if (!dateMatch) return;
 
           const date = parseInt(dateMatch[1]);
 
-          // Check for holidays (redtextsmall with holiday name)
+          // Check for holidays
           const holidaySpan = cell.querySelector('span.redtextsmall');
           if (holidaySpan) {
             const holidayText = holidaySpan.textContent.trim();
@@ -306,9 +306,21 @@ async function scrapeLeaveCalendar() {
             }
           }
 
-          // Extract leave entries - they're in nested tables with Approvedtextsmall spans
-          const leaveRows = cell.querySelectorAll('table tr');
+          // Check if this cell has a "More" link
+          const moreLink = cell.querySelector('a[href*="openlookup"]');
+          if (moreLink) {
+            // Extract the date from openlookup call
+            const hrefMatch = moreLink.href.match(/openlookup\('(\d+\/\d+\/\d+)'/);
+            if (hrefMatch) {
+              data.datesWithMore.push({
+                date: date,
+                lookupDate: hrefMatch[1]
+              });
+            }
+          }
 
+          // Extract visible leave entries
+          const leaveRows = cell.querySelectorAll('table tr');
           leaveRows.forEach(row => {
             const nameSpan = row.querySelector('td[width="70%"] span.Approvedtextsmall');
             const typeSpan = row.querySelector('td[width="25%"] span.Approvedtextsmall');
@@ -316,12 +328,9 @@ async function scrapeLeaveCalendar() {
             if (nameSpan && typeSpan) {
               const employee = nameSpan.textContent.trim();
               let leaveType = typeSpan.textContent.trim();
-
-              // Remove leading " - " from leave type
               leaveType = leaveType.replace(/^\s*-\s*/, '');
 
               if (employee && leaveType) {
-                // Create full date string (YYYY-MM-DD)
                 const monthNum = data.month.toString().padStart(2, '0');
                 const dayNum = date.toString().padStart(2, '0');
                 const fullDate = `${data.year}-${monthNum}-${dayNum}`;
@@ -341,6 +350,89 @@ async function scrapeLeaveCalendar() {
 
         return data;
       });
+
+      // For dates with "More" links, click to get full list
+      if (basicData.datesWithMore.length > 0) {
+        console.log(`📋 Found ${basicData.datesWithMore.length} dates with hidden entries, fetching...`);
+
+        for (const dateInfo of basicData.datesWithMore) {
+          try {
+            // Click the "More" link to open popup
+            const moreLinks = await page.$$('a[href*="openlookup"]');
+            for (const link of moreLinks) {
+              const href = await page.evaluate(el => el.href, link);
+              if (href.includes(`'${dateInfo.lookupDate}'`)) {
+                // Open popup in new page
+                const [popup] = await Promise.all([
+                  new Promise(resolve => page.once('popup', resolve)),
+                  link.click()
+                ]);
+
+                await popup.waitForSelector('table, .Approvedtextsmall', { timeout: 5000 });
+                await new Promise(resolve => setTimeout(resolve, 500));
+
+                // Save popup HTML for debugging
+                const popupHtml = await popup.content();
+                const fs = require('fs');
+                const path = require('path');
+                fs.writeFileSync(path.join(__dirname, '..', 'debug', `popup-${dateInfo.date}.html`), popupHtml);
+
+                // Extract all leaves from popup
+                // Format in popup: <span class="Approvedtextsmall">EMPLOYEE NAME - LEAVE_TYPE</span>
+                const popupLeaves = await popup.evaluate(() => {
+                  const leaves = [];
+
+                  // Find all Approvedtextsmall spans in tblCalendar
+                  const spans = document.querySelectorAll('#tblCalendar span.Approvedtextsmall');
+
+                  spans.forEach(span => {
+                    const text = span.textContent.trim();
+                    // Format: "EMPLOYEE NAME - LEAVE_TYPE"
+                    const match = text.match(/^(.+?)\s*-\s*([A-Z0-9\s]+)$/);
+                    if (match) {
+                      const employee = match[1].trim();
+                      const leaveType = match[2].trim();
+                      if (employee && leaveType) {
+                        leaves.push({ employee, leaveType });
+                      }
+                    }
+                  });
+
+                  return leaves;
+                });
+
+                // Replace leaves for this date with popup data
+                const monthNum = basicData.month.toString().padStart(2, '0');
+                const dayNum = dateInfo.date.toString().padStart(2, '0');
+                const fullDate = `${basicData.year}-${monthNum}-${dayNum}`;
+
+                // Remove existing entries for this date
+                basicData.leaves = basicData.leaves.filter(l => l.fullDate !== fullDate);
+
+                // Add all entries from popup
+                popupLeaves.forEach(leave => {
+                  basicData.leaves.push({
+                    date: dateInfo.date,
+                    fullDate: fullDate,
+                    month: parseInt(basicData.month),
+                    year: parseInt(basicData.year),
+                    employee: leave.employee,
+                    leaveType: leave.leaveType
+                  });
+                });
+
+                await popup.close();
+                console.log(`  ✓ Date ${dateInfo.date}: Found ${popupLeaves.length} entries`);
+                break;
+              }
+            }
+          } catch (e) {
+            console.log(`  ⚠️ Could not fetch full data for date ${dateInfo.date}: ${e.message}`);
+          }
+        }
+      }
+
+      const monthData = basicData;
 
       // Enrich with leave type metadata and display names
       monthData.leaves = monthData.leaves.map(leave => ({

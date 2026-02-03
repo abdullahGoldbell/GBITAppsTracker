@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-03T06:45:07.157Z",
+  "scrapedAt": "2026-02-03T06:49:37.025Z",
   "months": [
     {
       "month": 2,
@@ -179,6 +179,17 @@
       "employee": "SARFARAZ ABDULLAH",
       "leaveType": "ANNU",
       "displayName": "Abdullah",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 20,
+      "fullDate": "2026-02-20",
+      "month": 2,
+      "year": 2026,
+      "employee": "TAN WEN XIAN (ALLEN)",
+      "leaveType": "ANNU",
+      "displayName": "Allen",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },

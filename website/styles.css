@@ -789,43 +789,103 @@ body {
     padding: var(--space-md);
   }
 
-  .header-controls {
+  .header-brand {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
   }
 
-  .legend-bar {
+  .brand-text h1 {
+    font-size: 1.25rem;
+  }
+
+  .header-controls {
+    width: 100%;
+    justify-content: center;
     flex-wrap: wrap;
     gap: var(--space-md);
   }
 
+  .header-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sync-status {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .legend-bar {
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .legend-item {
+    font-size: 0.75rem;
+  }
+
   .main-layout {
-    padding: var(--space-md);
+    padding: var(--space-sm);
+    gap: var(--space-md);
+  }
+
+  .calendar-section {
+    border-radius: var(--radius-md);
   }
 
   .calendar-wrapper {
-    padding: var(--space-md);
+    padding: var(--space-sm);
+  }
+
+  .calendar-header {
+    margin-bottom: var(--space-sm);
+  }
+
+  .weekday {
+    padding: var(--space-sm);
+    font-size: 0.625rem;
   }
 
   .calendar-cell {
-    min-height: 90px;
-    padding: var(--space-xs);
+    min-height: 70px;
+    padding: 4px;
   }
 
   .date-number {
     font-size: 0.75rem;
   }
 
+  .calendar-cell.today .date-number {
+    width: 24px;
+    height: 24px;
+  }
+
+  .holiday-name {
+    font-size: 0.5rem;
+    padding: 2px 4px;
+  }
+
+  .leave-entries {
+    max-height: 40px;
+    gap: 2px;
+  }
+
   .leave-entry {
-    padding: 3px 6px;
+    padding: 2px 4px;
+    border-left-width: 2px;
   }
 
   .employee-name {
-    font-size: 0.6875rem;
+    font-size: 0.625rem;
+  }
+
+  .leave-type {
+    display: none;
   }
 
   .stats-bar {
-    gap: var(--space-lg);
+    gap: var(--space-md);
     padding: var(--space-md);
   }
 
@@ -833,16 +893,249 @@ body {
     font-size: 1.5rem;
   }
 
+  .stat-label {
+    font-size: 0.625rem;
+  }
+
+  .stat-divider {
+    height: 30px;
+  }
+
   .sidebar {
     display: block;
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
   }
 
   .sidebar-date {
+    font-size: 1rem;
     border-right: none;
     border-bottom: 2px solid var(--color-accent);
     padding-right: 0;
     padding-bottom: var(--space-md);
     margin-bottom: var(--space-md);
+  }
+
+  .sidebar-leave-item {
+    padding: var(--space-sm);
+  }
+
+  /* Modal mobile improvements */
+  .modal-container {
+    width: 95%;
+    max-height: 85vh;
+    padding: var(--space-lg);
+    margin: var(--space-md);
+  }
+
+  .modal-title {
+    font-size: 1.125rem;
+  }
+
+  /* Touch-friendly buttons */
+  .nav-arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .refresh-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .modal-close {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .header-brand {
+    gap: var(--space-sm);
+  }
+
+  .logo svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .brand-text h1 {
+    font-size: 1.125rem;
+  }
+
+  .dept-tag {
+    font-size: 0.55rem;
+    padding: 2px 6px;
+  }
+
+  .month-navigator {
+    padding: 2px;
+  }
+
+  .month-display {
+    min-width: 120px;
+  }
+
+  .month-text {
+    font-size: 0.9375rem;
+  }
+
+  .legend-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xs);
+    padding: var(--space-sm);
+  }
+
+  .legend-item {
+    justify-content: center;
+    font-size: 0.6875rem;
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .calendar-cell {
+    min-height: 60px;
+    padding: 3px;
+  }
+
+  .date-number {
+    font-size: 0.6875rem;
+  }
+
+  .calendar-cell.today .date-number {
+    width: 20px;
+    height: 20px;
+    font-size: 0.625rem;
+  }
+
+  .holiday-name {
+    font-size: 0.45rem;
+    padding: 1px 3px;
+    max-width: 100%;
+  }
+
+  .leave-entries {
+    max-height: 32px;
+  }
+
+  .leave-entry {
+    padding: 1px 3px;
+  }
+
+  .employee-name {
+    font-size: 0.5625rem;
+  }
+
+  .stats-bar {
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .stat-value {
+    font-size: 1.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.5625rem;
+  }
+
+  .stat-divider {
+    height: 24px;
+  }
+
+  .sidebar-date {
+    font-size: 0.9375rem;
+  }
+
+  .sidebar-section-title {
+    font-size: 0.625rem;
+  }
+
+  .sidebar-leave-name {
+    font-size: 0.875rem;
+  }
+
+  .sidebar-leave-type {
+    font-size: 0.6875rem;
+  }
+
+  .sidebar-holiday {
+    padding: var(--space-sm);
+  }
+
+  .holiday-icon {
+    font-size: 1.25rem;
+  }
+}
+
+/* Landscape phone orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .main-layout {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .calendar-cell {
+    min-height: 50px;
+  }
+
+  .leave-entries {
+    max-height: 28px;
+  }
+
+  .stats-bar {
+    padding: var(--space-sm);
+  }
+
+  .stat-value {
+    font-size: 1.25rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .calendar-cell:hover {
+    background: var(--color-surface);
+  }
+
+  .calendar-cell.has-leaves:active {
+    background: var(--color-bg-warm);
+    transform: scale(0.98);
+  }
+
+  .leave-entry:hover {
+    transform: none;
+  }
+
+  .sidebar-leave-item:hover {
+    transform: none;
+  }
+
+  .nav-arrow:hover {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .nav-arrow:active {
+    background: var(--color-surface);
+  }
+
+  .refresh-btn:hover {
+    border-color: var(--color-border);
+    color: var(--color-text-secondary);
+  }
+
+  .refresh-btn:active {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
   }
 }
 

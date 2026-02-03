@@ -56,6 +56,47 @@ class LeaveCalendar {
       if (e.key === 'ArrowLeft') this.changeMonth(-1);
       if (e.key === 'ArrowRight') this.changeMonth(1);
     });
+
+    // Touch swipe navigation for mobile
+    this.initTouchSwipe();
+  }
+
+  initTouchSwipe() {
+    const calendarSection = document.querySelector('.calendar-section');
+    if (!calendarSection) return;
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+
+    calendarSection.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    calendarSection.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      this.handleSwipe(touchStartX, touchStartY, touchEndX, touchEndY);
+    }, { passive: true });
+  }
+
+  handleSwipe(startX, startY, endX, endY) {
+    const diffX = startX - endX;
+    const diffY = startY - endY;
+    const minSwipeDistance = 50;
+
+    // Only trigger if horizontal swipe is greater than vertical (not scrolling)
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > minSwipeDistance) {
+      if (diffX > 0) {
+        // Swiped left - go to next month
+        this.changeMonth(1);
+      } else {
+        // Swiped right - go to previous month
+        this.changeMonth(-1);
+      }
+    }
   }
 
   async loadData() {

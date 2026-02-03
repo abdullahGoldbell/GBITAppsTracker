@@ -88,7 +88,30 @@ class LeaveCalendar {
     btn.disabled = true;
 
     try {
-      // Add cache-busting query param to force fresh fetch
+      // If webhook is configured, trigger remote scraper first
+      if (typeof CONFIG !== 'undefined' && CONFIG.WEBHOOK_URL) {
+        try {
+          document.getElementById('lastUpdated').textContent = 'Scraping fresh data...';
+          const webhookResponse = await fetch(`${CONFIG.WEBHOOK_URL}/scrape`, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${CONFIG.WEBHOOK_TOKEN}`,
+              'Content-Type': 'application/json'
+            }
+          });
+
+          if (!webhookResponse.ok) {
+            console.warn('Webhook failed, loading cached data');
+          } else {
+            // Wait a moment for GitHub Pages to update
+            await new Promise(resolve => setTimeout(resolve, 3000));
+          }
+        } catch (webhookError) {
+          console.warn('Webhook unavailable:', webhookError.message);
+        }
+      }
+
+      // Fetch the JSON data (fresh or cached)
       const response = await fetch('./data/leaves.json?t=' + Date.now());
       if (!response.ok) throw new Error('Data file not found');
 
@@ -103,6 +126,7 @@ class LeaveCalendar {
       this.render();
     } catch (error) {
       console.error('Error refreshing data:', error);
+      document.getElementById('lastUpdated').textContent = 'Refresh failed';
     } finally {
       btn.classList.remove('spinning');
       btn.disabled = false;

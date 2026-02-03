@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.hriq.scraper</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/abdullahsarfaraz/Desktop/AppsTeamLeave/GBITAppsTracker/scripts/daily-scrape.sh</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>8</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>UserName</key>
+    <string>abdullahsarfaraz</string>
+    <key>WorkingDirectory</key>
+    <string>/Users/abdullahsarfaraz/Desktop/AppsTeamLeave/GBITAppsTracker</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HOME</key>
+        <string>/Users/abdullahsarfaraz</string>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>SSH_AUTH_SOCK</key>
+        <string>/Users/abdullahsarfaraz/.ssh/agent.sock</string>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/tmp/hriq-scraper.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/hriq-scraper-error.log</string>
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

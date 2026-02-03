@@ -9,6 +9,13 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 
 cd "$PROJECT_DIR"
 
+# Set up environment for LaunchDaemon context
+export HOME="/Users/abdullahsarfaraz"
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
+
+# Configure SSH to use the deploy key (no agent needed)
+export GIT_SSH_COMMAND="ssh -i $HOME/.ssh/id_ed25519 -o IdentitiesOnly=yes -o StrictHostKeyChecking=no"
+
 echo "$(date): Starting HRIQ scraper..."
 
 # Pull latest changes

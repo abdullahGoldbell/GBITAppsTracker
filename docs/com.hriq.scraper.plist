@@ -7,7 +7,7 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/abdullah/Desktop/Abdullah AI Stuff/HRIQ/scripts/daily-scrape.sh</string>
+        <string>/Users/abdullahsarfaraz/Desktop/AppsTeamLeave/GBITAppsTracker/scripts/daily-scrape.sh</string>
     </array>
     <key>StartCalendarInterval</key>
     <dict>

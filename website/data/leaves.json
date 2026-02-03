@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-03T03:51:38.825Z",
+  "scrapedAt": "2026-02-03T06:33:50.964Z",
   "month": "2",
   "year": "2026",
   "holidays": [
@@ -15,14 +15,14 @@
       "fullDate": "2026-02-17",
       "month": 2,
       "year": 2026,
-      "name": "Lunar New Year (1st day)"
+      "name": "Lunar New year (1st day)(SG)"
     },
     {
       "date": 18,
       "fullDate": "2026-02-18",
       "month": 2,
       "year": 2026,
-      "name": "Lunar New Year (2nd day)"
+      "name": "Lunar New year (2nd day)(SG)"
     },
     {
       "date": 19,

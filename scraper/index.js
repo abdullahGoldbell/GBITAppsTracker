@@ -327,10 +327,10 @@ async function scrapeLeaveCalendar() {
     }));
 
     // Add company-declared holidays for current month
-    const currentMonth = parseInt(calendarData.month);
-    const currentYear = parseInt(calendarData.year);
+    const calMonth = parseInt(calendarData.month);
+    const calYear = parseInt(calendarData.year);
     COMPANY_HOLIDAYS.forEach(holiday => {
-      if (holiday.month === currentMonth && holiday.year === currentYear) {
+      if (holiday.month === calMonth && holiday.year === calYear) {
         // Check if not already in holidays list
         const exists = calendarData.holidays.some(h =>
           h.date === holiday.date && h.month === holiday.month && h.year === holiday.year

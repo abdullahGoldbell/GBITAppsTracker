@@ -485,6 +485,15 @@ body {
   padding: var(--space-sm);
   position: relative;
   transition: var(--transition-fast);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.calendar-cell *,
+.calendar-cell *::before,
+.calendar-cell *::after {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .calendar-cell:hover {

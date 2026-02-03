@@ -20,11 +20,11 @@ class LeaveCalendar {
     // Friendly name mapping
     this.nameMap = {
       'JOHN YANG JIA HAN': 'John',
-      'LEE CHOON PHENG': 'Eddy',
+      'LEE CHIN HAI (EDDY)': 'Eddy',
       'MOHD ELIYAZAR BIN ISMAIL': 'Eliyazar',
       'SARFARAZ ABDULLAH': 'Abdullah',
-      'LIM YU XUAN, JOEY': 'Joey',
-      'TAN WEI LIANG': 'Allen',
+      'LIM YI HWEE (JOEY)': 'Joey',
+      'TAN WEN XIAN (ALLEN)': 'Allen',
       'CHUA SIN HAI': 'Sin Hai'
     };
 

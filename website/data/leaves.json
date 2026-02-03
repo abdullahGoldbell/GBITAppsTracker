@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-03T03:44:08.796Z",
+  "scrapedAt": "2026-02-03T03:45:04.464Z",
   "month": "2",
   "year": "2026",
   "holidays": [
@@ -26,7 +26,7 @@
       "year": 2026,
       "employee": "LIM YI HWEE (JOEY)",
       "leaveType": "SL",
-      "displayName": "LIM YI HWEE (JOEY)",
+      "displayName": "Joey",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
     },
@@ -59,7 +59,7 @@
       "year": 2026,
       "employee": "LIM YI HWEE (JOEY)",
       "leaveType": "WFH 2",
-      "displayName": "LIM YI HWEE (JOEY)",
+      "displayName": "Joey",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
     },
@@ -70,7 +70,7 @@
       "year": 2026,
       "employee": "LEE CHIN HAI (EDDY)",
       "leaveType": "CCL",
-      "displayName": "LEE CHIN HAI (EDDY)",
+      "displayName": "Eddy",
       "leaveTypeName": "Childcare Leave",
       "color": "#f39c12"
     },
@@ -81,7 +81,7 @@
       "year": 2026,
       "employee": "LIM YI HWEE (JOEY)",
       "leaveType": "WFH 2",
-      "displayName": "LIM YI HWEE (JOEY)",
+      "displayName": "Joey",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
     },
@@ -103,7 +103,7 @@
       "year": 2026,
       "employee": "LIM YI HWEE (JOEY)",
       "leaveType": "ANNU",
-      "displayName": "LIM YI HWEE (JOEY)",
+      "displayName": "Joey",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -136,7 +136,7 @@
       "year": 2026,
       "employee": "LIM YI HWEE (JOEY)",
       "leaveType": "ANNU",
-      "displayName": "LIM YI HWEE (JOEY)",
+      "displayName": "Joey",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -158,7 +158,7 @@
       "year": 2026,
       "employee": "TAN WEN XIAN (ALLEN)",
       "leaveType": "ANNU",
-      "displayName": "TAN WEN XIAN (ALLEN)",
+      "displayName": "Allen",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },

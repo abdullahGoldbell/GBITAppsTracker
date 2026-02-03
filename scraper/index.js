@@ -33,11 +33,11 @@ const LEAVE_TYPES = {
 // Friendly name mapping (system name -> display name)
 const NAME_MAP = {
   'JOHN YANG JIA HAN': 'John',
-  'LEE CHOON PHENG': 'Eddy',
+  'LEE CHIN HAI (EDDY)': 'Eddy',
   'MOHD ELIYAZAR BIN ISMAIL': 'Eliyazar',
   'SARFARAZ ABDULLAH': 'Abdullah',
-  'LIM YU XUAN, JOEY': 'Joey',
-  'TAN WEI LIANG': 'Allen',
+  'LIM YI HWEE (JOEY)': 'Joey',
+  'TAN WEN XIAN (ALLEN)': 'Allen',
   'CHUA SIN HAI': 'Sin Hai'
 };
 

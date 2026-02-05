@@ -29,7 +29,8 @@ class LeaveCalendar {
       'TAN WEN XIAN (ALLEN)': 'Allen',
       'CHUA SIN HAI': 'Sin Hai',
       'LEE KIAN HOW': 'Kian How',
-      'CHIN WAI MUN': 'Wai Mun'
+      'CHIN WAI MUN': 'Wai Mun',
+      'NEO ZHI KAI': 'Zhi Kai'
     };
 
     this.init();
@@ -272,7 +273,8 @@ class LeaveCalendar {
 
     const type = document.createElement('span');
     type.className = 'leave-type';
-    type.textContent = leave.leaveType;
+    // Show period (AM/PM) if present
+    type.textContent = leave.period ? `${leave.leaveType} (${leave.period})` : leave.leaveType;
 
     entry.appendChild(name);
     entry.appendChild(type);
@@ -351,12 +353,13 @@ class LeaveCalendar {
       const color = this.leaveTypes[leave.leaveType]?.color || leave.color || '#7a7a8a';
       const typeName = this.leaveTypes[leave.leaveType]?.name || leave.leaveType;
       const displayName = this.getDisplayName(leave);
+      const periodLabel = leave.period ? ` (${leave.period})` : '';
       html += `
         <div class="modal-leave-item">
           <div class="modal-leave-color" style="background: ${color};"></div>
           <div class="modal-leave-info">
             <div class="modal-leave-name">${displayName}</div>
-            <div class="modal-leave-type">${typeName}</div>
+            <div class="modal-leave-type">${typeName}${periodLabel}</div>
           </div>
         </div>
       `;
@@ -442,13 +445,14 @@ class LeaveCalendar {
         const color = this.leaveTypes[leave.leaveType]?.color || leave.color || '#7a7a8a';
         const typeName = this.leaveTypes[leave.leaveType]?.name || leave.leaveType;
         const displayName = this.getDisplayName(leave);
+        const periodLabel = leave.period ? ` (${leave.period})` : '';
 
         html += `
           <div class="sidebar-leave-item">
             <div class="sidebar-leave-color" style="background: ${color};"></div>
             <div class="sidebar-leave-info">
               <div class="sidebar-leave-name">${displayName}</div>
-              <div class="sidebar-leave-type">${typeName}</div>
+              <div class="sidebar-leave-type">${typeName}${periodLabel}</div>
             </div>
           </div>
         `;

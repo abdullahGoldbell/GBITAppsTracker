@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-03T08:56:04.986Z",
+  "scrapedAt": "2026-02-05T01:13:36.749Z",
   "month": 1,
   "year": 2026,
   "monthName": "January",
@@ -20,6 +20,7 @@
       "year": 2026,
       "employee": "LEE KIAN HOW",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Kian How",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -31,6 +32,7 @@
       "year": 2026,
       "employee": "JOHN YANG JIA HAN",
       "leaveType": "NSL",
+      "period": null,
       "displayName": "John",
       "leaveTypeName": "National Service Leave",
       "color": "#1abc9c"
@@ -42,6 +44,7 @@
       "year": 2026,
       "employee": "LEE CHIN HAI (EDDY)",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Eddy",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -51,9 +54,10 @@
       "fullDate": "2026-01-09",
       "month": 1,
       "year": 2026,
-      "employee": "LEE KIAN HOW (PM)",
+      "employee": "LEE KIAN HOW",
       "leaveType": "ANNU",
-      "displayName": "LEE KIAN HOW (PM)",
+      "period": "PM",
+      "displayName": "Kian How",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -62,9 +66,10 @@
       "fullDate": "2026-01-12",
       "month": 1,
       "year": 2026,
-      "employee": "MOHD ELIYAZAR BIN RUSLAN (PM)",
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "ANNU",
-      "displayName": "MOHD ELIYAZAR BIN RUSLAN (PM)",
+      "period": "PM",
+      "displayName": "Eliyazar",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -75,6 +80,7 @@
       "year": 2026,
       "employee": "SARFARAZ ABDULLAH",
       "leaveType": "SL",
+      "period": null,
       "displayName": "Abdullah",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
@@ -86,6 +92,7 @@
       "year": 2026,
       "employee": "TAN WEN XIAN (ALLEN)",
       "leaveType": "SL",
+      "period": null,
       "displayName": "Allen",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
@@ -97,6 +104,7 @@
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Eliyazar",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -108,6 +116,7 @@
       "year": 2026,
       "employee": "SARFARAZ ABDULLAH",
       "leaveType": "SL",
+      "period": null,
       "displayName": "Abdullah",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
@@ -119,6 +128,7 @@
       "year": 2026,
       "employee": "LIM YI HWEE (JOEY)",
       "leaveType": "SL",
+      "period": null,
       "displayName": "Joey",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
@@ -130,6 +140,7 @@
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Eliyazar",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -139,9 +150,10 @@
       "fullDate": "2026-01-14",
       "month": 1,
       "year": 2026,
-      "employee": "NEO ZHI KAI (PM)",
+      "employee": "NEO ZHI KAI",
       "leaveType": "WFH 2",
-      "displayName": "NEO ZHI KAI (PM)",
+      "period": "PM",
+      "displayName": "Zhi Kai",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
     },
@@ -152,6 +164,7 @@
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Eliyazar",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -163,7 +176,8 @@
       "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "WFH 2",
-      "displayName": "NEO ZHI KAI",
+      "period": null,
+      "displayName": "Zhi Kai",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
     },
@@ -174,6 +188,7 @@
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Eliyazar",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -185,6 +200,7 @@
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Eliyazar",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -196,6 +212,7 @@
       "year": 2026,
       "employee": "LEE CHIN HAI (EDDY)",
       "leaveType": "WFH 2",
+      "period": null,
       "displayName": "Eddy",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
@@ -207,6 +224,7 @@
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Eliyazar",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -218,6 +236,7 @@
       "year": 2026,
       "employee": "LEE CHIN HAI (EDDY)",
       "leaveType": "SL",
+      "period": null,
       "displayName": "Eddy",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
@@ -229,6 +248,7 @@
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Eliyazar",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -240,6 +260,7 @@
       "year": 2026,
       "employee": "WU JIAN",
       "leaveType": "WFH 2",
+      "period": null,
       "displayName": "WU JIAN",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
@@ -249,9 +270,10 @@
       "fullDate": "2026-01-23",
       "month": 1,
       "year": 2026,
-      "employee": "JOHN YANG JIA HAN (PM)",
+      "employee": "JOHN YANG JIA HAN",
       "leaveType": "ANNU",
-      "displayName": "JOHN YANG JIA HAN (PM)",
+      "period": "PM",
+      "displayName": "John",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -262,6 +284,7 @@
       "year": 2026,
       "employee": "LEE CHIN HAI (EDDY)",
       "leaveType": "SL",
+      "period": null,
       "displayName": "Eddy",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
@@ -273,6 +296,7 @@
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Eliyazar",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -284,6 +308,7 @@
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "CCL",
+      "period": null,
       "displayName": "Eliyazar",
       "leaveTypeName": "Childcare Leave",
       "color": "#f39c12"
@@ -295,7 +320,8 @@
       "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "SL",
-      "displayName": "NEO ZHI KAI",
+      "period": null,
+      "displayName": "Zhi Kai",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
     },
@@ -306,6 +332,7 @@
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "WFH 2",
+      "period": null,
       "displayName": "Eliyazar",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
@@ -317,6 +344,7 @@
       "year": 2026,
       "employee": "JOHN YANG JIA HAN",
       "leaveType": "WFH 2",
+      "period": null,
       "displayName": "John",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
@@ -328,7 +356,8 @@
       "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "WFH 2",
-      "displayName": "NEO ZHI KAI",
+      "period": null,
+      "displayName": "Zhi Kai",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
     },
@@ -339,6 +368,7 @@
       "year": 2026,
       "employee": "SARFARAZ ABDULLAH",
       "leaveType": "WFH 2",
+      "period": null,
       "displayName": "Abdullah",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
@@ -350,6 +380,7 @@
       "year": 2026,
       "employee": "JOHN YANG JIA HAN",
       "leaveType": "SL",
+      "period": null,
       "displayName": "John",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
@@ -361,6 +392,7 @@
       "year": 2026,
       "employee": "LEE KIAN HOW",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Kian How",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -372,6 +404,7 @@
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Eliyazar",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -383,6 +416,7 @@
       "year": 2026,
       "employee": "SARFARAZ ABDULLAH",
       "leaveType": "WFH 2",
+      "period": null,
       "displayName": "Abdullah",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
@@ -394,6 +428,7 @@
       "year": 2026,
       "employee": "CHUA SIN HAI",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Sin Hai",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -405,6 +440,7 @@
       "year": 2026,
       "employee": "JOHN YANG JIA HAN",
       "leaveType": "WFH 2",
+      "period": null,
       "displayName": "John",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
@@ -416,6 +452,7 @@
       "year": 2026,
       "employee": "LIM YI HWEE (JOEY)",
       "leaveType": "WFH 2",
+      "period": null,
       "displayName": "Joey",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
@@ -427,6 +464,7 @@
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "WFH 2",
+      "period": null,
       "displayName": "Eliyazar",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
@@ -438,6 +476,7 @@
       "year": 2026,
       "employee": "CHIN WAI MUN",
       "leaveType": "CCLE",
+      "period": null,
       "displayName": "Wai Mun",
       "leaveTypeName": "CCLE",
       "color": "#999999"
@@ -449,6 +488,7 @@
       "year": 2026,
       "employee": "JOHN YANG JIA HAN",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "John",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -460,6 +500,7 @@
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "CCL",
+      "period": null,
       "displayName": "Eliyazar",
       "leaveTypeName": "Childcare Leave",
       "color": "#f39c12"
@@ -471,7 +512,8 @@
       "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "ANNU",
-      "displayName": "NEO ZHI KAI",
+      "period": null,
+      "displayName": "Zhi Kai",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -482,6 +524,7 @@
       "year": 2026,
       "employee": "WU JIAN",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "WU JIAN",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"

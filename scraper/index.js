@@ -46,8 +46,18 @@ const NAME_MAP = {
   'TAN WEN XIAN (ALLEN)': 'Allen',
   'CHUA SIN HAI': 'Sin Hai',
   'LEE KIAN HOW': 'Kian How',
-  'CHIN WAI MUN': 'Wai Mun'
+  'CHIN WAI MUN': 'Wai Mun',
+  'NEO ZHI KAI': 'Zhi Kai'
 };
+
+// Helper to strip (AM)/(PM) from employee name and return both
+function parseEmployeeName(rawName) {
+  const match = rawName.match(/^(.+?)\s*\((AM|PM)\)$/);
+  if (match) {
+    return { name: match[1].trim(), period: match[2] };
+  }
+  return { name: rawName, period: null };
+}
 
 async function scrapeLeaveCalendar() {
   // Validate credentials
@@ -447,12 +457,21 @@ async function scrapeLeaveCalendar() {
       const monthData = basicData;
 
       // Enrich with leave type metadata and display names
-      monthData.leaves = monthData.leaves.map(leave => ({
-        ...leave,
-        displayName: NAME_MAP[leave.employee] || leave.employee,
-        leaveTypeName: LEAVE_TYPES[leave.leaveType]?.name || leave.leaveType,
-        color: LEAVE_TYPES[leave.leaveType]?.color || '#999999'
-      }));
+      monthData.leaves = monthData.leaves.map(leave => {
+        // Parse AM/PM from employee name
+        const parsed = parseEmployeeName(leave.employee);
+        const cleanName = parsed.name;
+        const period = parsed.period;
+
+        return {
+          ...leave,
+          employee: cleanName,
+          period: period,
+          displayName: NAME_MAP[cleanName] || cleanName,
+          leaveTypeName: LEAVE_TYPES[leave.leaveType]?.name || leave.leaveType,
+          color: LEAVE_TYPES[leave.leaveType]?.color || '#999999'
+        };
+      });
 
       // Add company-declared holidays for this month
       const calMonth = parseInt(monthData.month);

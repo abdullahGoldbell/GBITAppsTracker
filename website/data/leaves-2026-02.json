@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-03T08:56:09.597Z",
+  "scrapedAt": "2026-02-05T01:13:44.594Z",
   "month": 2,
   "year": 2026,
   "monthName": "February",
@@ -41,6 +41,7 @@
       "year": 2026,
       "employee": "LIM YI HWEE (JOEY)",
       "leaveType": "SL",
+      "period": null,
       "displayName": "Joey",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
@@ -52,6 +53,7 @@
       "year": 2026,
       "employee": "CHUA SIN HAI",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Sin Hai",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -63,6 +65,7 @@
       "year": 2026,
       "employee": "LEE KIAN HOW",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Kian How",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -74,6 +77,7 @@
       "year": 2026,
       "employee": "CHUA SIN HAI",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Sin Hai",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -85,7 +89,20 @@
       "year": 2026,
       "employee": "LIM YI HWEE (JOEY)",
       "leaveType": "WFH 2",
+      "period": null,
       "displayName": "Joey",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 5,
+      "fullDate": "2026-02-05",
+      "month": 2,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Abdullah",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
     },
@@ -96,6 +113,7 @@
       "year": 2026,
       "employee": "LEE CHIN HAI (EDDY)",
       "leaveType": "CCL",
+      "period": null,
       "displayName": "Eddy",
       "leaveTypeName": "Childcare Leave",
       "color": "#f39c12"
@@ -105,9 +123,10 @@
       "fullDate": "2026-02-11",
       "month": 2,
       "year": 2026,
-      "employee": "NEO ZHI KAI (PM)",
+      "employee": "NEO ZHI KAI",
       "leaveType": "WFH 2",
-      "displayName": "NEO ZHI KAI (PM)",
+      "period": "PM",
+      "displayName": "Zhi Kai",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
     },
@@ -118,6 +137,7 @@
       "year": 2026,
       "employee": "LIM YI HWEE (JOEY)",
       "leaveType": "WFH 2",
+      "period": null,
       "displayName": "Joey",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
@@ -129,7 +149,8 @@
       "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "WFH 2",
-      "displayName": "NEO ZHI KAI",
+      "period": null,
+      "displayName": "Zhi Kai",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
     },
@@ -140,6 +161,7 @@
       "year": 2026,
       "employee": "SARFARAZ ABDULLAH",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Abdullah",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -151,6 +173,7 @@
       "year": 2026,
       "employee": "LIM YI HWEE (JOEY)",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Joey",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -162,6 +185,7 @@
       "year": 2026,
       "employee": "SARFARAZ ABDULLAH",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Abdullah",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -173,7 +197,8 @@
       "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "NSL",
-      "displayName": "NEO ZHI KAI",
+      "period": null,
+      "displayName": "Zhi Kai",
       "leaveTypeName": "National Service Leave",
       "color": "#1abc9c"
     },
@@ -184,6 +209,7 @@
       "year": 2026,
       "employee": "TAN WEN XIAN (ALLEN)",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Allen",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -195,7 +221,8 @@
       "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "NSL",
-      "displayName": "NEO ZHI KAI",
+      "period": null,
+      "displayName": "Zhi Kai",
       "leaveTypeName": "National Service Leave",
       "color": "#1abc9c"
     },
@@ -206,6 +233,7 @@
       "year": 2026,
       "employee": "CHUA SIN HAI",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Sin Hai",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -217,7 +245,8 @@
       "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "NSL",
-      "displayName": "NEO ZHI KAI",
+      "period": null,
+      "displayName": "Zhi Kai",
       "leaveTypeName": "National Service Leave",
       "color": "#1abc9c"
     },
@@ -228,6 +257,7 @@
       "year": 2026,
       "employee": "CHUA SIN HAI",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Sin Hai",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -239,7 +269,8 @@
       "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "NSL",
-      "displayName": "NEO ZHI KAI",
+      "period": null,
+      "displayName": "Zhi Kai",
       "leaveTypeName": "National Service Leave",
       "color": "#1abc9c"
     },
@@ -250,7 +281,8 @@
       "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "NSL",
-      "displayName": "NEO ZHI KAI",
+      "period": null,
+      "displayName": "Zhi Kai",
       "leaveTypeName": "National Service Leave",
       "color": "#1abc9c"
     },
@@ -261,7 +293,8 @@
       "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "NSL",
-      "displayName": "NEO ZHI KAI",
+      "period": null,
+      "displayName": "Zhi Kai",
       "leaveTypeName": "National Service Leave",
       "color": "#1abc9c"
     },
@@ -272,6 +305,7 @@
       "year": 2026,
       "employee": "CHIN WAI MUN",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Wai Mun",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -283,6 +317,7 @@
       "year": 2026,
       "employee": "JOHN YANG JIA HAN",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "John",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -294,6 +329,7 @@
       "year": 2026,
       "employee": "LEE KIAN HOW",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Kian How",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -305,6 +341,7 @@
       "year": 2026,
       "employee": "LIM YI HWEE (JOEY)",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Joey",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -316,6 +353,7 @@
       "year": 2026,
       "employee": "SARFARAZ ABDULLAH",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Abdullah",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -327,6 +365,7 @@
       "year": 2026,
       "employee": "TAN WEN XIAN (ALLEN)",
       "leaveType": "ANNU",
+      "period": null,
       "displayName": "Allen",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"

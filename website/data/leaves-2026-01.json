@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-05T01:13:36.749Z",
+  "scrapedAt": "2026-02-05T01:19:15.610Z",
   "month": 1,
   "year": 2026,
   "monthName": "January",
@@ -392,10 +392,22 @@
       "year": 2026,
       "employee": "LEE KIAN HOW",
       "leaveType": "ANNU",
-      "period": null,
+      "period": "PM",
       "displayName": "Kian How",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
+    },
+    {
+      "date": 21,
+      "fullDate": "2026-01-21",
+      "month": 1,
+      "year": 2026,
+      "employee": "LEE KIAN HOW",
+      "leaveType": "TRAIN",
+      "period": "AM",
+      "displayName": "Kian How",
+      "leaveTypeName": "TRAIN",
+      "color": "#999999"
     },
     {
       "date": 21,
@@ -476,7 +488,7 @@
       "year": 2026,
       "employee": "CHIN WAI MUN",
       "leaveType": "CCLE",
-      "period": null,
+      "period": "PM",
       "displayName": "Wai Mun",
       "leaveTypeName": "CCLE",
       "color": "#999999"
@@ -488,7 +500,7 @@
       "year": 2026,
       "employee": "JOHN YANG JIA HAN",
       "leaveType": "ANNU",
-      "period": null,
+      "period": "PM",
       "displayName": "John",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
@@ -524,7 +536,7 @@
       "year": 2026,
       "employee": "WU JIAN",
       "leaveType": "ANNU",
-      "period": null,
+      "period": "PM",
       "displayName": "WU JIAN",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"

@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-05T01:13:44.594Z",
+  "scrapedAt": "2026-02-05T01:19:21.432Z",
   "month": 2,
   "year": 2026,
   "monthName": "February",
@@ -305,7 +305,7 @@
       "year": 2026,
       "employee": "CHIN WAI MUN",
       "leaveType": "ANNU",
-      "period": null,
+      "period": "PM",
       "displayName": "Wai Mun",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"

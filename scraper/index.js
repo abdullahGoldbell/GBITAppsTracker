@@ -399,8 +399,7 @@ async function scrapeLeaveCalendar() {
                 fs.writeFileSync(path.join(__dirname, '..', 'debug', `popup-${dateInfo.date}.html`), popupHtml);
 
                 // Extract all leaves from popup
-                // Format in popup: <span class="Approvedtextsmall">EMPLOYEE NAME - LEAVE_TYPE</span>
-                // Note: Leave type may have (PM) suffix like "ANNU (PM)"
+                // Format in popup: <span class="Approvedtextsmall">EMPLOYEE NAME - LEAVE_TYPE (AM/PM)</span>
                 const popupLeaves = await popup.evaluate(() => {
                   const leaves = [];
 
@@ -409,13 +408,14 @@ async function scrapeLeaveCalendar() {
 
                   spans.forEach(span => {
                     const text = span.textContent.trim();
-                    // Format: "EMPLOYEE NAME - LEAVE_TYPE" or "EMPLOYEE NAME - LEAVE_TYPE (PM)"
-                    const match = text.match(/^(.+?)\s*-\s*([A-Z0-9\s]+?)(?:\s*\(PM\))?$/);
+                    // Format: "EMPLOYEE NAME - LEAVE_TYPE" or "EMPLOYEE NAME - LEAVE_TYPE (AM/PM)"
+                    const match = text.match(/^(.+?)\s*-\s*([A-Z0-9\s]+?)(?:\s*\((AM|PM)\))?$/);
                     if (match) {
                       const employee = match[1].trim();
                       const leaveType = match[2].trim();
+                      const period = match[3] || null; // "AM", "PM", or null
                       if (employee && leaveType) {
-                        leaves.push({ employee, leaveType });
+                        leaves.push({ employee, leaveType, period });
                       }
                     }
                   });
@@ -439,7 +439,8 @@ async function scrapeLeaveCalendar() {
                     month: parseInt(basicData.month),
                     year: parseInt(basicData.year),
                     employee: leave.employee,
-                    leaveType: leave.leaveType
+                    leaveType: leave.leaveType,
+                    period: leave.period
                   });
                 });
 
@@ -458,10 +459,11 @@ async function scrapeLeaveCalendar() {
 
       // Enrich with leave type metadata and display names
       monthData.leaves = monthData.leaves.map(leave => {
-        // Parse AM/PM from employee name
+        // Parse AM/PM from employee name (for visible entries that might have it in name)
         const parsed = parseEmployeeName(leave.employee);
         const cleanName = parsed.name;
-        const period = parsed.period;
+        // Use existing period from popup parsing, or fallback to parsed from name
+        const period = leave.period || parsed.period;
 
         return {
           ...leave,

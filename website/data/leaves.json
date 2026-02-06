@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-05T01:19:05.795Z",
+  "scrapedAt": "2026-02-06T07:20:54.222Z",
   "months": [
     {
       "month": 1,
@@ -663,6 +663,18 @@
       "color": "#9b59b6"
     },
     {
+      "date": 6,
+      "fullDate": "2026-02-06",
+      "month": 2,
+      "year": 2026,
+      "employee": "LIM YI HWEE (JOEY)",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Joey",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
       "date": 11,
       "fullDate": "2026-02-11",
       "month": 2,
@@ -991,6 +1003,18 @@
       "fullDate": "2026-03-05",
       "month": 3,
       "year": 2026,
+      "employee": "CHIN WAI MUN",
+      "leaveType": "TRAIN",
+      "period": null,
+      "displayName": "Wai Mun",
+      "leaveTypeName": "TRAIN",
+      "color": "#999999"
+    },
+    {
+      "date": 5,
+      "fullDate": "2026-03-05",
+      "month": 3,
+      "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "NSL",
       "period": null,
@@ -1021,6 +1045,18 @@
       "displayName": "Sin Hai",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
+    },
+    {
+      "date": 12,
+      "fullDate": "2026-03-12",
+      "month": 3,
+      "year": 2026,
+      "employee": "CHIN WAI MUN",
+      "leaveType": "TRAIN",
+      "period": null,
+      "displayName": "Wai Mun",
+      "leaveTypeName": "TRAIN",
+      "color": "#999999"
     },
     {
       "date": 12,

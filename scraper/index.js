@@ -6,7 +6,7 @@ require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 // Configuration
 const CONFIG = {
   baseUrl: 'https://essportal.goldbell.com.sg',
-  loginUrl: 'https://essportal.goldbell.com.sg/HR/Main/Login.aspx',
+  loginUrl: 'https://essportal.goldbell.com.sg/HR/main/login.aspx',
   calendarUrl: 'https://essportal.goldbell.com.sg/LEAVE/Leave/eLeave/ViewLeaveCalendar2.aspx',
   credentials: {
     userId: process.env.HRIQ_USER_ID,
@@ -151,13 +151,13 @@ async function scrapeLeaveCalendar() {
     }
 
     console.log('🖱️ Clicking sign in...');
-    await Promise.all([
-      page.waitForNavigation({ waitUntil: 'networkidle2', timeout: 30000 }),
-      signInButton.click()
-    ]);
+    await signInButton.click();
 
-    // Wait a moment for redirect
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // Wait for login to complete (ASP.NET postback doesn't always trigger navigation)
+    await page.waitForFunction(
+      () => !window.location.href.toLowerCase().includes('login'),
+      { timeout: 30000 }
+    );
 
     // Check if login was successful
     const currentUrl = page.url();

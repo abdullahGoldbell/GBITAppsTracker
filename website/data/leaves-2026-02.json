@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-05T01:19:21.432Z",
+  "scrapedAt": "2026-02-06T07:21:05.347Z",
   "month": 2,
   "year": 2026,
   "monthName": "February",
@@ -105,6 +105,18 @@
       "displayName": "Abdullah",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
+    },
+    {
+      "date": 6,
+      "fullDate": "2026-02-06",
+      "month": 2,
+      "year": 2026,
+      "employee": "LIM YI HWEE (JOEY)",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Joey",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
     },
     {
       "date": 11,

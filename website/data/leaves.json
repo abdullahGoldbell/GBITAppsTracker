@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-09T03:01:38.811Z",
+  "scrapedAt": "2026-02-10T00:03:48.506Z",
   "months": [
     {
       "month": 1,
@@ -673,6 +673,18 @@
       "displayName": "Joey",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
+    },
+    {
+      "date": 9,
+      "fullDate": "2026-02-09",
+      "month": 2,
+      "year": 2026,
+      "employee": "LIM YI HWEE (JOEY)",
+      "leaveType": "SL",
+      "period": null,
+      "displayName": "Joey",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
     },
     {
       "date": 11,

@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-10T00:03:59.929Z",
+  "scrapedAt": "2026-02-10T01:04:58.322Z",
   "month": 2,
   "year": 2026,
   "monthName": "February",
@@ -129,6 +129,18 @@
       "displayName": "Joey",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
+    },
+    {
+      "date": 10,
+      "fullDate": "2026-02-10",
+      "month": 2,
+      "year": 2026,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Eliyazar",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
     },
     {
       "date": 11,

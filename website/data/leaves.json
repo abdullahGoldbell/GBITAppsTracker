@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-11T02:05:45.411Z",
+  "scrapedAt": "2026-02-11T03:01:44.345Z",
   "months": [
     {
       "month": 1,
@@ -679,6 +679,18 @@
       "fullDate": "2026-02-09",
       "month": 2,
       "year": 2026,
+      "employee": "LEE CHIN HAI (EDDY)",
+      "leaveType": "CCL",
+      "period": null,
+      "displayName": "Eddy",
+      "leaveTypeName": "Childcare Leave",
+      "color": "#f39c12"
+    },
+    {
+      "date": 9,
+      "fullDate": "2026-02-09",
+      "month": 2,
+      "year": 2026,
       "employee": "LIM YI HWEE (JOEY)",
       "leaveType": "SL",
       "period": null,
@@ -697,6 +709,18 @@
       "displayName": "John",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
+    },
+    {
+      "date": 10,
+      "fullDate": "2026-02-10",
+      "month": 2,
+      "year": 2026,
+      "employee": "LEE CHIN HAI (EDDY)",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Eddy",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
     },
     {
       "date": 10,
@@ -1261,18 +1285,6 @@
       "displayName": "Zhi Kai",
       "leaveTypeName": "National Service Leave",
       "color": "#1abc9c"
-    },
-    {
-      "date": 2,
-      "fullDate": "2026-03-02",
-      "month": 3,
-      "year": 2026,
-      "employee": "LEE KIAN HOW",
-      "leaveType": "ANNU",
-      "period": null,
-      "displayName": "Kian How",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
     },
     {
       "date": 2,

@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-11T02:06:02.182Z",
+  "scrapedAt": "2026-02-11T03:02:01.246Z",
   "month": 3,
   "year": 2026,
   "monthName": "March",
@@ -24,18 +24,6 @@
       "displayName": "Zhi Kai",
       "leaveTypeName": "National Service Leave",
       "color": "#1abc9c"
-    },
-    {
-      "date": 2,
-      "fullDate": "2026-03-02",
-      "month": 3,
-      "year": 2026,
-      "employee": "LEE KIAN HOW",
-      "leaveType": "ANNU",
-      "period": null,
-      "displayName": "Kian How",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
     },
     {
       "date": 2,

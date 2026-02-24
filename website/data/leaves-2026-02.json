@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-24T01:06:05.377Z",
+  "scrapedAt": "2026-02-24T02:00:32.390Z",
   "month": 2,
   "year": 2026,
   "monthName": "February",
@@ -309,42 +309,6 @@
       "displayName": "Zhi Kai",
       "leaveTypeName": "National Service Leave",
       "color": "#1abc9c"
-    },
-    {
-      "date": 25,
-      "fullDate": "2026-02-25",
-      "month": 2,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "period": null,
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 25,
-      "fullDate": "2026-02-25",
-      "month": 2,
-      "year": 2026,
-      "employee": "NEO ZHI KAI",
-      "leaveType": "NSL",
-      "period": null,
-      "displayName": "Zhi Kai",
-      "leaveTypeName": "National Service Leave",
-      "color": "#1abc9c"
-    },
-    {
-      "date": 25,
-      "fullDate": "2026-02-25",
-      "month": 2,
-      "year": 2026,
-      "employee": "SARFARAZ ABDULLAH",
-      "leaveType": "WFH 2",
-      "period": null,
-      "displayName": "Abdullah",
-      "leaveTypeName": "Work From Home",
-      "color": "#9b59b6"
     },
     {
       "date": 26,
@@ -741,6 +705,42 @@
       "displayName": "Allen",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
+    },
+    {
+      "date": 25,
+      "fullDate": "2026-02-25",
+      "month": 2,
+      "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Sin Hai",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 25,
+      "fullDate": "2026-02-25",
+      "month": 2,
+      "year": 2026,
+      "employee": "NEO ZHI KAI",
+      "leaveType": "NSL",
+      "period": null,
+      "displayName": "Zhi Kai",
+      "leaveTypeName": "National Service Leave",
+      "color": "#1abc9c"
+    },
+    {
+      "date": 25,
+      "fullDate": "2026-02-25",
+      "month": 2,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
     }
   ]
 }

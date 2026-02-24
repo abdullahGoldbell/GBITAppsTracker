@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-23T03:00:34.621Z",
+  "scrapedAt": "2026-02-24T00:05:08.690Z",
   "month": 2,
   "year": 2026,
   "monthName": "February",
@@ -335,6 +335,18 @@
       "color": "#1abc9c"
     },
     {
+      "date": 25,
+      "fullDate": "2026-02-25",
+      "month": 2,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
       "date": 26,
       "fullDate": "2026-02-26",
       "month": 2,
@@ -357,6 +369,18 @@
       "displayName": "Zhi Kai",
       "leaveTypeName": "National Service Leave",
       "color": "#1abc9c"
+    },
+    {
+      "date": 26,
+      "fullDate": "2026-02-26",
+      "month": 2,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
     },
     {
       "date": 27,

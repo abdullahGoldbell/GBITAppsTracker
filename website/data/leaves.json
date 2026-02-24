@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-23T03:00:22.197Z",
+  "scrapedAt": "2026-02-24T00:04:54.303Z",
   "months": [
     {
       "month": 1,
@@ -1227,6 +1227,18 @@
       "color": "#1abc9c"
     },
     {
+      "date": 25,
+      "fullDate": "2026-02-25",
+      "month": 2,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
       "date": 26,
       "fullDate": "2026-02-26",
       "month": 2,
@@ -1249,6 +1261,18 @@
       "displayName": "Zhi Kai",
       "leaveTypeName": "National Service Leave",
       "color": "#1abc9c"
+    },
+    {
+      "date": 26,
+      "fullDate": "2026-02-26",
+      "month": 2,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
     },
     {
       "date": 27,
@@ -1323,6 +1347,18 @@
       "color": "#1abc9c"
     },
     {
+      "date": 4,
+      "fullDate": "2026-03-04",
+      "month": 3,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
       "date": 5,
       "fullDate": "2026-03-05",
       "month": 3,
@@ -1347,6 +1383,18 @@
       "color": "#1abc9c"
     },
     {
+      "date": 5,
+      "fullDate": "2026-03-05",
+      "month": 3,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
       "date": 6,
       "fullDate": "2026-03-06",
       "month": 3,
@@ -1369,6 +1417,18 @@
       "displayName": "Sin Hai",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
+    },
+    {
+      "date": 11,
+      "fullDate": "2026-03-11",
+      "month": 3,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
     },
     {
       "date": 12,
@@ -1403,6 +1463,18 @@
       "leaveType": "WFH 2",
       "period": null,
       "displayName": "Zhi Kai",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 12,
+      "fullDate": "2026-03-12",
+      "month": 3,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Abdullah",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
     },

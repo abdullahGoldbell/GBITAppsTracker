@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-02-25T03:00:18.862Z",
+  "scrapedAt": "2026-02-26T00:04:52.126Z",
   "months": [
     {
       "month": 1,
@@ -1203,6 +1203,18 @@
       "color": "#1abc9c"
     },
     {
+      "date": 24,
+      "fullDate": "2026-02-24",
+      "month": 2,
+      "year": 2026,
+      "employee": "TAN WEN XIAN (ALLEN)",
+      "leaveType": "SL",
+      "period": null,
+      "displayName": "Allen",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
       "date": 25,
       "fullDate": "2026-02-25",
       "month": 2,
@@ -1239,6 +1251,18 @@
       "color": "#9b59b6"
     },
     {
+      "date": 25,
+      "fullDate": "2026-02-25",
+      "month": 2,
+      "year": 2026,
+      "employee": "TAN WEN XIAN (ALLEN)",
+      "leaveType": "SL",
+      "period": null,
+      "displayName": "Allen",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
       "date": 26,
       "fullDate": "2026-02-26",
       "month": 2,
@@ -1273,6 +1297,18 @@
       "displayName": "Abdullah",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
+    },
+    {
+      "date": 27,
+      "fullDate": "2026-02-27",
+      "month": 2,
+      "year": 2026,
+      "employee": "LEE CHIN HAI (EDDY)",
+      "leaveType": "ANNU",
+      "period": "PM",
+      "displayName": "Eddy",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
     },
     {
       "date": 27,

@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-03-01T02:06:32.557Z",
+  "scrapedAt": "2026-03-01T03:00:52.679Z",
   "month": 3,
   "year": 2026,
   "monthName": "March",
@@ -114,6 +114,18 @@
       "fullDate": "2026-03-11",
       "month": 3,
       "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Sin Hai",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 11,
+      "fullDate": "2026-03-11",
+      "month": 3,
+      "year": 2026,
       "employee": "SARFARAZ ABDULLAH",
       "leaveType": "WFH 2",
       "period": null,
@@ -158,6 +170,18 @@
       "color": "#3498db"
     },
     {
+      "date": 16,
+      "fullDate": "2026-03-16",
+      "month": 3,
+      "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Sin Hai",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
       "date": 17,
       "fullDate": "2026-03-17",
       "month": 3,
@@ -182,6 +206,18 @@
       "color": "#3498db"
     },
     {
+      "date": 17,
+      "fullDate": "2026-03-17",
+      "month": 3,
+      "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Sin Hai",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
       "date": 18,
       "fullDate": "2026-03-18",
       "month": 3,
@@ -190,6 +226,18 @@
       "leaveType": "ANNU",
       "period": null,
       "displayName": "Wai Mun",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 18,
+      "fullDate": "2026-03-18",
+      "month": 3,
+      "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Sin Hai",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -214,6 +262,18 @@
       "leaveType": "ANNU",
       "period": null,
       "displayName": "Wai Mun",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 19,
+      "fullDate": "2026-03-19",
+      "month": 3,
+      "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Sin Hai",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -238,6 +298,18 @@
       "leaveType": "ANNU",
       "period": null,
       "displayName": "Wai Mun",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 20,
+      "fullDate": "2026-03-20",
+      "month": 3,
+      "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Sin Hai",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -266,6 +338,30 @@
       "color": "#3498db"
     },
     {
+      "date": 23,
+      "fullDate": "2026-03-23",
+      "month": 3,
+      "year": 2026,
+      "employee": "WU JIAN",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "WU JIAN",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 25,
+      "fullDate": "2026-03-25",
+      "month": 3,
+      "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Sin Hai",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
       "date": 25,
       "fullDate": "2026-03-25",
       "month": 3,
@@ -286,6 +382,30 @@
       "leaveType": "ANNU",
       "period": null,
       "displayName": "Sin Hai",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 26,
+      "fullDate": "2026-03-26",
+      "month": 3,
+      "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Sin Hai",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 31,
+      "fullDate": "2026-03-31",
+      "month": 3,
+      "year": 2026,
+      "employee": "WU JIAN",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "WU JIAN",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -350,6 +470,18 @@
       "color": "#9b59b6"
     },
     {
+      "date": 5,
+      "fullDate": "2026-03-05",
+      "month": 3,
+      "year": 2026,
+      "employee": "WU JIAN",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "WU JIAN",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
       "date": 12,
       "fullDate": "2026-03-12",
       "month": 3,
@@ -360,6 +492,18 @@
       "displayName": "Wai Mun",
       "leaveTypeName": "TRAIN",
       "color": "#999999"
+    },
+    {
+      "date": 12,
+      "fullDate": "2026-03-12",
+      "month": 3,
+      "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Sin Hai",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
     },
     {
       "date": 12,

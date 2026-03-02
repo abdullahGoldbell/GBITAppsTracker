@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-03-02T02:06:55.591Z",
+  "scrapedAt": "2026-03-02T03:00:19.117Z",
   "months": [
     {
       "month": 2,
@@ -1431,6 +1431,18 @@
       "color": "#1abc9c"
     },
     {
+      "date": 10,
+      "fullDate": "2026-03-10",
+      "month": 3,
+      "year": 2026,
+      "employee": "LEE CHIN HAI (EDDY)",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Eddy",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
       "date": 11,
       "fullDate": "2026-03-11",
       "month": 3,
@@ -1585,6 +1597,18 @@
       "displayName": "Sin Hai",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
+    },
+    {
+      "date": 17,
+      "fullDate": "2026-03-17",
+      "month": 3,
+      "year": 2026,
+      "employee": "LEE CHIN HAI (EDDY)",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Eddy",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
     },
     {
       "date": 18,

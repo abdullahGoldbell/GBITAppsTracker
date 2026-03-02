@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-03-02T01:06:00.092Z",
+  "scrapedAt": "2026-03-02T02:07:09.878Z",
   "month": 2,
   "year": 2026,
   "monthName": "February",
@@ -225,42 +225,6 @@
       "displayName": "Allen",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
-    },
-    {
-      "date": 27,
-      "fullDate": "2026-02-27",
-      "month": 2,
-      "year": 2026,
-      "employee": "LEE CHIN HAI (EDDY)",
-      "leaveType": "ANNU",
-      "period": "PM",
-      "displayName": "Eddy",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 27,
-      "fullDate": "2026-02-27",
-      "month": 2,
-      "year": 2026,
-      "employee": "LEE CHIN HAI (EDDY)",
-      "leaveType": "ANNU",
-      "period": "PM",
-      "displayName": "Eddy",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 27,
-      "fullDate": "2026-02-27",
-      "month": 2,
-      "year": 2026,
-      "employee": "NEO ZHI KAI",
-      "leaveType": "NSL",
-      "period": null,
-      "displayName": "Zhi Kai",
-      "leaveTypeName": "National Service Leave",
-      "color": "#1abc9c"
     },
     {
       "date": 28,
@@ -1209,6 +1173,54 @@
       "displayName": "Abdullah",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
+    },
+    {
+      "date": 27,
+      "fullDate": "2026-02-27",
+      "month": 2,
+      "year": 2026,
+      "employee": "LEE CHIN HAI (EDDY)",
+      "leaveType": "ANNU",
+      "period": "PM",
+      "displayName": "Eddy",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 27,
+      "fullDate": "2026-02-27",
+      "month": 2,
+      "year": 2026,
+      "employee": "LEE CHIN HAI (EDDY)",
+      "leaveType": "ANNU",
+      "period": "PM",
+      "displayName": "Eddy",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 27,
+      "fullDate": "2026-02-27",
+      "month": 2,
+      "year": 2026,
+      "employee": "LIM YI HWEE (JOEY)",
+      "leaveType": "SL",
+      "period": null,
+      "displayName": "Joey",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
+      "date": 27,
+      "fullDate": "2026-02-27",
+      "month": 2,
+      "year": 2026,
+      "employee": "NEO ZHI KAI",
+      "leaveType": "NSL",
+      "period": null,
+      "displayName": "Zhi Kai",
+      "leaveTypeName": "National Service Leave",
+      "color": "#1abc9c"
     }
   ]
 }

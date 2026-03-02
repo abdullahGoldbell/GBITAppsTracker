@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-03-02T01:05:46.631Z",
+  "scrapedAt": "2026-03-02T02:06:55.591Z",
   "months": [
     {
       "month": 2,
@@ -1219,6 +1219,18 @@
       "fullDate": "2026-02-27",
       "month": 2,
       "year": 2026,
+      "employee": "LIM YI HWEE (JOEY)",
+      "leaveType": "SL",
+      "period": null,
+      "displayName": "Joey",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
+      "date": 27,
+      "fullDate": "2026-02-27",
+      "month": 2,
+      "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "NSL",
       "period": null,
@@ -1255,12 +1267,36 @@
       "fullDate": "2026-03-02",
       "month": 3,
       "year": 2026,
+      "employee": "JOHN YANG JIA HAN",
+      "leaveType": "ANNU",
+      "period": "AM",
+      "displayName": "John",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 2,
+      "fullDate": "2026-03-02",
+      "month": 3,
+      "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "NSL",
       "period": null,
       "displayName": "Zhi Kai",
       "leaveTypeName": "National Service Leave",
       "color": "#1abc9c"
+    },
+    {
+      "date": 2,
+      "fullDate": "2026-03-02",
+      "month": 3,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "CCL",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Childcare Leave",
+      "color": "#f39c12"
     },
     {
       "date": 3,

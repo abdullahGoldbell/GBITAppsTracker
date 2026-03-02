@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-03-02T01:06:05.436Z",
+  "scrapedAt": "2026-03-02T02:07:15.375Z",
   "month": 3,
   "year": 2026,
   "monthName": "March",
@@ -30,12 +30,36 @@
       "fullDate": "2026-03-02",
       "month": 3,
       "year": 2026,
+      "employee": "JOHN YANG JIA HAN",
+      "leaveType": "ANNU",
+      "period": "AM",
+      "displayName": "John",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 2,
+      "fullDate": "2026-03-02",
+      "month": 3,
+      "year": 2026,
       "employee": "NEO ZHI KAI",
       "leaveType": "NSL",
       "period": null,
       "displayName": "Zhi Kai",
       "leaveTypeName": "National Service Leave",
       "color": "#1abc9c"
+    },
+    {
+      "date": 2,
+      "fullDate": "2026-03-02",
+      "month": 3,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "CCL",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Childcare Leave",
+      "color": "#f39c12"
     },
     {
       "date": 3,

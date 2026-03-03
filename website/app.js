@@ -300,13 +300,22 @@ class LeaveCalendar {
     const month = date.getMonth() + 1;
     const year = date.getFullYear();
 
-    return this.data.leaves.filter(leave => {
+    const matches = this.data.leaves.filter(leave => {
       if (leave.year && leave.month) {
         return leave.date === day && leave.month === month && leave.year === year;
       }
       const dataMonth = parseInt(this.data.month) || (new Date().getMonth() + 1);
       const dataYear = parseInt(this.data.year) || new Date().getFullYear();
       return leave.date === day && month === dataMonth && year === dataYear;
+    });
+
+    // Deduplicate (safety guard against duplicate source data)
+    const seen = new Set();
+    return matches.filter(leave => {
+      const key = `${leave.employee}|${leave.leaveType}|${leave.period ?? ''}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
     });
   }
 

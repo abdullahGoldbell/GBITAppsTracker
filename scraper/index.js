@@ -475,6 +475,15 @@ async function scrapeLeaveCalendar() {
         };
       });
 
+      // Deduplicate: same employee + same date + same leaveType + same period = same entry
+      const seen = new Set();
+      monthData.leaves = monthData.leaves.filter(leave => {
+        const key = `${leave.fullDate}|${leave.employee}|${leave.leaveType}|${leave.period ?? ''}`;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+
       // Add company-declared holidays for this month
       const calMonth = parseInt(monthData.month);
       const calYear = parseInt(monthData.year);

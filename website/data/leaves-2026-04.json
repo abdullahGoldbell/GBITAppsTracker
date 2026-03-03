@@ -26,18 +26,6 @@
       "color": "#3498db"
     },
     {
-      "date": 1,
-      "fullDate": "2026-04-01",
-      "month": 4,
-      "year": 2026,
-      "employee": "WU JIAN",
-      "leaveType": "ANNU",
-      "period": null,
-      "displayName": "WU JIAN",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
       "date": 2,
       "fullDate": "2026-04-02",
       "month": 4,
@@ -46,18 +34,6 @@
       "leaveType": "ANNU",
       "period": null,
       "displayName": "Wai Mun",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 2,
-      "fullDate": "2026-04-02",
-      "month": 4,
-      "year": 2026,
-      "employee": "WU JIAN",
-      "leaveType": "ANNU",
-      "period": null,
-      "displayName": "WU JIAN",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     },
@@ -170,30 +146,6 @@
       "color": "#3498db"
     },
     {
-      "date": 27,
-      "fullDate": "2026-04-27",
-      "month": 4,
-      "year": 2026,
-      "employee": "TAN WEN XIAN (ALLEN)",
-      "leaveType": "ANNU",
-      "period": null,
-      "displayName": "Allen",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 28,
-      "fullDate": "2026-04-28",
-      "month": 4,
-      "year": 2026,
-      "employee": "TAN WEN XIAN (ALLEN)",
-      "leaveType": "ANNU",
-      "period": null,
-      "displayName": "Allen",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
       "date": 28,
       "fullDate": "2026-04-28",
       "month": 4,
@@ -208,30 +160,6 @@
     {
       "date": 29,
       "fullDate": "2026-04-29",
-      "month": 4,
-      "year": 2026,
-      "employee": "TAN WEN XIAN (ALLEN)",
-      "leaveType": "ANNU",
-      "period": null,
-      "displayName": "Allen",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 29,
-      "fullDate": "2026-04-29",
-      "month": 4,
-      "year": 2026,
-      "employee": "TAN WEN XIAN (ALLEN)",
-      "leaveType": "ANNU",
-      "period": null,
-      "displayName": "Allen",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 30,
-      "fullDate": "2026-04-30",
       "month": 4,
       "year": 2026,
       "employee": "TAN WEN XIAN (ALLEN)",

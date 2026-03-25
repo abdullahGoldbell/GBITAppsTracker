@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-03-25T02:00:47.262Z",
+  "scrapedAt": "2026-03-25T03:00:42.085Z",
   "month": 3,
   "year": 2026,
   "monthName": "March",
@@ -307,11 +307,11 @@
       "month": 3,
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
-      "leaveType": "ANNU",
+      "leaveType": "SL",
       "period": null,
       "displayName": "Eliyazar",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
     },
     {
       "date": 26,
@@ -343,11 +343,11 @@
       "month": 3,
       "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
-      "leaveType": "ANNU",
+      "leaveType": "SL",
       "period": null,
       "displayName": "Eliyazar",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
     },
     {
       "date": 27,

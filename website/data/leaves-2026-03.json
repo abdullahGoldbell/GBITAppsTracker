@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-03-26T00:00:56.127Z",
+  "scrapedAt": "2026-03-26T01:00:39.987Z",
   "month": 3,
   "year": 2026,
   "monthName": "March",
@@ -840,6 +840,18 @@
       "displayName": "Eliyazar",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
+    },
+    {
+      "date": 26,
+      "fullDate": "2026-03-26",
+      "month": 3,
+      "year": 2026,
+      "employee": "TAN WEN XIAN (ALLEN)",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Allen",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
     }
   ]
 }

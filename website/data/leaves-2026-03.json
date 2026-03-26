@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-03-25T03:00:42.085Z",
+  "scrapedAt": "2026-03-26T00:00:56.127Z",
   "month": 3,
   "year": 2026,
   "monthName": "March",
@@ -314,42 +314,6 @@
       "color": "#e74c3c"
     },
     {
-      "date": 26,
-      "fullDate": "2026-03-26",
-      "month": 3,
-      "year": 2026,
-      "employee": "CHUA SIN HAI",
-      "leaveType": "ANNU",
-      "period": null,
-      "displayName": "Sin Hai",
-      "leaveTypeName": "Annual Leave",
-      "color": "#3498db"
-    },
-    {
-      "date": 26,
-      "fullDate": "2026-03-26",
-      "month": 3,
-      "year": 2026,
-      "employee": "LIM YI HWEE (JOEY)",
-      "leaveType": "WFH 2",
-      "period": null,
-      "displayName": "Joey",
-      "leaveTypeName": "Work From Home",
-      "color": "#9b59b6"
-    },
-    {
-      "date": 26,
-      "fullDate": "2026-03-26",
-      "month": 3,
-      "year": 2026,
-      "employee": "MOHD ELIYAZAR BIN RUSLAN",
-      "leaveType": "SL",
-      "period": null,
-      "displayName": "Eliyazar",
-      "leaveTypeName": "Sick Leave",
-      "color": "#e74c3c"
-    },
-    {
       "date": 27,
       "fullDate": "2026-03-27",
       "month": 3,
@@ -840,6 +804,42 @@
       "displayName": "WU JIAN",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
+    },
+    {
+      "date": 26,
+      "fullDate": "2026-03-26",
+      "month": 3,
+      "year": 2026,
+      "employee": "CHUA SIN HAI",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Sin Hai",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 26,
+      "fullDate": "2026-03-26",
+      "month": 3,
+      "year": 2026,
+      "employee": "LIM YI HWEE (JOEY)",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Joey",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 26,
+      "fullDate": "2026-03-26",
+      "month": 3,
+      "year": 2026,
+      "employee": "MOHD ELIYAZAR BIN RUSLAN",
+      "leaveType": "SL",
+      "period": null,
+      "displayName": "Eliyazar",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
     }
   ]
 }

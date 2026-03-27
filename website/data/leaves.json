@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-03-26T01:00:15.618Z",
+  "scrapedAt": "2026-03-27T00:00:22.987Z",
   "months": [
     {
       "month": 2,
@@ -1483,6 +1483,30 @@
       "fullDate": "2026-03-23",
       "month": 3,
       "year": 2026,
+      "employee": "LEE CHIN HAI (EDDY)",
+      "leaveType": "SL",
+      "period": null,
+      "displayName": "Eddy",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
+      "date": 23,
+      "fullDate": "2026-03-23",
+      "month": 3,
+      "year": 2026,
+      "employee": "LIM YI HWEE (JOEY)",
+      "leaveType": "SL",
+      "period": null,
+      "displayName": "Joey",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
+      "date": 23,
+      "fullDate": "2026-03-23",
+      "month": 3,
+      "year": 2026,
       "employee": "MOHD ELIYAZAR BIN RUSLAN",
       "leaveType": "ANNU",
       "period": null,
@@ -1571,6 +1595,18 @@
       "leaveType": "SL",
       "period": null,
       "displayName": "Eliyazar",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
+    },
+    {
+      "date": 25,
+      "fullDate": "2026-03-25",
+      "month": 3,
+      "year": 2026,
+      "employee": "TAN WEN XIAN (ALLEN)",
+      "leaveType": "SL",
+      "period": null,
+      "displayName": "Allen",
       "leaveTypeName": "Sick Leave",
       "color": "#e74c3c"
     },

@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-03-27T03:00:22.248Z",
+  "scrapedAt": "2026-03-28T00:00:23.895Z",
   "months": [
     {
       "month": 2,
@@ -1657,6 +1657,18 @@
       "displayName": "Allen",
       "leaveTypeName": "Work From Home",
       "color": "#9b59b6"
+    },
+    {
+      "date": 27,
+      "fullDate": "2026-03-27",
+      "month": 3,
+      "year": 2026,
+      "employee": "JOHN YANG JIA HAN",
+      "leaveType": "SL",
+      "period": null,
+      "displayName": "John",
+      "leaveTypeName": "Sick Leave",
+      "color": "#e74c3c"
     },
     {
       "date": 27,

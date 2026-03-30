@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-03-29T03:00:19.374Z",
+  "scrapedAt": "2026-03-30T01:00:23.483Z",
   "months": [
     {
       "month": 2,
@@ -1741,6 +1741,18 @@
       "displayName": "Wai Mun",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
+    },
+    {
+      "date": 2,
+      "fullDate": "2026-04-02",
+      "month": 4,
+      "year": 2026,
+      "employee": "JOHN YANG JIA HAN",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "John",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
     },
     {
       "date": 2,

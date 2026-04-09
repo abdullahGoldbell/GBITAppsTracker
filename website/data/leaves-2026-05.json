@@ -1,0 +1,132 @@
+{
+  "scrapedAt": "2026-04-09T01:24:50.958Z",
+  "month": 5,
+  "year": 2026,
+  "monthName": "May",
+  "holidays": [
+    {
+      "date": 1,
+      "fullDate": "2026-05-01",
+      "month": 5,
+      "year": 2026,
+      "name": "Labour Day(SG)"
+    },
+    {
+      "date": 27,
+      "fullDate": "2026-05-27",
+      "month": 5,
+      "year": 2026,
+      "name": "Hari Raya Haji(SG)"
+    }
+  ],
+  "leaves": [
+    {
+      "date": 4,
+      "fullDate": "2026-05-04",
+      "month": 5,
+      "year": 2026,
+      "employee": "TAN WEN XIAN (ALLEN)",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Allen",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 5,
+      "fullDate": "2026-05-05",
+      "month": 5,
+      "year": 2026,
+      "employee": "TAN WEN XIAN (ALLEN)",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Allen",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 6,
+      "fullDate": "2026-05-06",
+      "month": 5,
+      "year": 2026,
+      "employee": "TAN WEN XIAN (ALLEN)",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Allen",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 21,
+      "fullDate": "2026-05-21",
+      "month": 5,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 22,
+      "fullDate": "2026-05-22",
+      "month": 5,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 25,
+      "fullDate": "2026-05-25",
+      "month": 5,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 26,
+      "fullDate": "2026-05-26",
+      "month": 5,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 28,
+      "fullDate": "2026-05-28",
+      "month": 5,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 29,
+      "fullDate": "2026-05-29",
+      "month": 5,
+      "year": 2026,
+      "employee": "SARFARAZ ABDULLAH",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Abdullah",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    }
+  ]
+}

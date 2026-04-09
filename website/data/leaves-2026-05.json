@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-04-09T01:24:50.958Z",
+  "scrapedAt": "2026-04-09T01:32:59.497Z",
   "month": 5,
   "year": 2026,
   "monthName": "May",
@@ -125,6 +125,30 @@
       "leaveType": "ANNU",
       "period": null,
       "displayName": "Abdullah",
+      "leaveTypeName": "Annual Leave",
+      "color": "#3498db"
+    },
+    {
+      "date": 28,
+      "fullDate": "2026-05-28",
+      "month": 5,
+      "year": 2026,
+      "employee": "NEO ZHI KAI",
+      "leaveType": "WFH 2",
+      "period": null,
+      "displayName": "Zhi Kai",
+      "leaveTypeName": "Work From Home",
+      "color": "#9b59b6"
+    },
+    {
+      "date": 29,
+      "fullDate": "2026-05-29",
+      "month": 5,
+      "year": 2026,
+      "employee": "NEO ZHI KAI",
+      "leaveType": "ANNU",
+      "period": null,
+      "displayName": "Zhi Kai",
       "leaveTypeName": "Annual Leave",
       "color": "#3498db"
     }
